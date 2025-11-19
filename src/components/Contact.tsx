@@ -87,7 +87,7 @@ export default function Contact() {
                             <a href="https://github.com/SCCSMARTCODE" target="_blank" rel="noopener noreferrer" className="p-3 rounded-lg bg-bg-secondary text-text-secondary hover:bg-primary hover:text-bg-primary transition-all">
                                 <Github size={20} />
                             </a>
-                            <a href="https://linkedin.com/in/emmanuelayobami" target="_blank" rel="noopener noreferrer" className="p-3 rounded-lg bg-bg-secondary text-text-secondary hover:bg-primary hover:text-bg-primary transition-all">
+                            <a href="https://www.linkedin.com/in/sccsmartcode/" target="_blank" rel="noopener noreferrer" className="p-3 rounded-lg bg-bg-secondary text-text-secondary hover:bg-primary hover:text-bg-primary transition-all">
                                 <Linkedin size={20} />
                             </a>
                             <a href="https://x.com/SCCSMARTCODE" target="_blank" rel="noopener noreferrer" className="p-3 rounded-lg bg-bg-secondary text-text-secondary hover:bg-primary hover:text-bg-primary transition-all">

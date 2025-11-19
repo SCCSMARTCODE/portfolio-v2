@@ -135,7 +135,7 @@ export default function Hero() {
                         className="flex gap-8 border-t border-border-primary pt-8 w-full"
                     >
                         <a href="https://github.com/SCCSMARTCODE" target="_blank" rel="noopener noreferrer" className="text-text-tertiary hover:text-primary transition-colors"><Github size={24} /></a>
-                        <a href="https://linkedin.com/in/emmanuelayobami" target="_blank" rel="noopener noreferrer" className="text-text-tertiary hover:text-primary transition-colors"><Linkedin size={24} /></a>
+                        <a href="https://www.linkedin.com/in/sccsmartcode/" target="_blank" rel="noopener noreferrer" className="text-text-tertiary hover:text-primary transition-colors"><Linkedin size={24} /></a>
                         <a href="https://x.com/SCCSMARTCODE" target="_blank" rel="noopener noreferrer" className="text-text-tertiary hover:text-primary transition-colors"><Twitter size={24} /></a>
                         <a href="https://www.youtube.com/channel/UC-KNjTsSQGokYvUsz74VVXg" target="_blank" rel="noopener noreferrer" className="text-text-tertiary hover:text-primary transition-colors"><Youtube size={24} /></a>
                     </motion.div>

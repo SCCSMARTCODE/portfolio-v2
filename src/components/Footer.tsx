@@ -19,7 +19,7 @@ export default function Footer() {
                             <a href="https://github.com/SCCSMARTCODE" target="_blank" rel="noopener noreferrer" className="text-text-tertiary hover:text-primary transition-colors">
                                 <Github size={20} />
                             </a>
-                            <a href="https://linkedin.com/in/emmanuelayobami" target="_blank" rel="noopener noreferrer" className="text-text-tertiary hover:text-primary transition-colors">
+                            <a href="https://www.linkedin.com/in/sccsmartcode/" target="_blank" rel="noopener noreferrer" className="text-text-tertiary hover:text-primary transition-colors">
                                 <Linkedin size={20} />
                             </a>
                             <a href="https://x.com/SCCSMARTCODE" target="_blank" rel="noopener noreferrer" className="text-text-tertiary hover:text-primary transition-colors">

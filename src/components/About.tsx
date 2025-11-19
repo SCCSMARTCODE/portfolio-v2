@@ -71,10 +71,10 @@ export default function About() {
                             Hello, I'm <span className="text-primary">Emmanuel Ayobami</span>
                         </h3>
                         <p className="text-text-secondary text-lg leading-relaxed mb-6">
-                            A passionate <strong className="text-text-primary">Product & AI Engineer</strong> at VingtAI, where I bridge the gap between cutting-edge research and production-ready AI systems.
+                            Passionate <strong className="text-text-primary">Software & AI/ML Engineer</strong> driven by the mathematical foundations that power our digital world.
                         </p>
                         <p className="text-text-secondary text-lg leading-relaxed">
-                            I build AI systems that don't just work—they push boundaries. My engineering philosophy lies at the intersection of deep research and practical engineering.
+                            I specialize in building intelligent systems, from AI Agents and Deep Learning to advanced Personalization engines. I design scalable backend APIs and engineer robust AI systems that bridge the gap between mathematical theory and practical solutions.
                         </p>
                     </motion.div>
 

@@ -1,0 +1,130 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-primary: var(--primary);
+  --color-primary-dark: var(--primary-dark);
+  --color-primary-light: var(--primary-light);
+  --color-secondary: var(--secondary);
+  --color-accent: var(--accent);
+
+  --color-bg-primary: var(--bg-primary);
+  --color-bg-secondary: var(--bg-secondary);
+  --color-bg-tertiary: var(--bg-tertiary);
+  --color-bg-glass: var(--bg-glass);
+
+  --color-text-primary: var(--text-primary);
+  --color-text-secondary: var(--text-secondary);
+  --color-text-tertiary: var(--text-tertiary);
+
+  --font-sans: var(--font-inter);
+  --font-heading: var(--font-jakarta);
+  --font-mono: var(--font-mono);
+
+  --animate-float: float 6s ease-in-out infinite;
+  --animate-pulse-glow: pulse-glow 2s ease-in-out infinite;
+
+  @keyframes float {
+
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+
+  @keyframes pulse-glow {
+
+    0%,
+    100% {
+      box-shadow: 0 0 0 0 rgba(0, 212, 255, 0.7);
+      transform: scale(1);
+    }
+
+    50% {
+      box-shadow: 0 0 0 20px rgba(0, 212, 255, 0);
+      transform: scale(1.05);
+    }
+  }
+}
+
+:root {
+  /* Colors - Premium Dark Theme */
+  --primary: #00d4ff;
+  --primary-dark: #00a3cc;
+  --primary-light: #5ce1ff;
+
+  --secondary: #7c3aed;
+
+  --accent: #f59e0b;
+
+  /* Background Colors */
+  --bg-primary: #050507;
+  --bg-secondary: #0f0f16;
+  --bg-tertiary: #181824;
+  --bg-glass: rgba(255, 255, 255, 0.03);
+
+  /* Text Colors */
+  --text-primary: #ffffff;
+  --text-secondary: #94a3b8;
+  --text-tertiary: #64748b;
+}
+
+[data-theme="light"] {
+  /* Colors - Premium Light Theme */
+  --primary: #4f46e5;
+  /* Indigo 600 - Deep & Vibrant */
+  --primary-dark: #3730a3;
+  /* Indigo 800 */
+  --primary-light: #818cf8;
+  /* Indigo 400 */
+
+  --secondary: #db2777;
+  /* Pink 600 - Playful Contrast */
+
+  --accent: #d97706;
+  /* Amber 600 */
+
+  /* Background Colors */
+  --bg-primary: #f8fafc;
+  /* Slate 50 - Soft Cool Gray Base */
+  --bg-secondary: #ffffff;
+  /* Pure White for Cards/Sections */
+  --bg-tertiary: #f1f5f9;
+  /* Slate 100 */
+  --bg-glass: rgba(255, 255, 255, 0.75);
+  /* Stronger Frosted Glass */
+
+  /* Text Colors */
+  --text-primary: #0f172a;
+  /* Slate 900 - Deepest Blue-Gray */
+  --text-secondary: #475569;
+  /* Slate 600 */
+  --text-tertiary: #64748b;
+  /* Slate 500 */
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-secondary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--bg-tertiary);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary);
+}

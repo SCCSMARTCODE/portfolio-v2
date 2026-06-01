@@ -15,7 +15,7 @@ export default function ThemeToggle() {
             : "light";
 
         const initialTheme = savedTheme || systemTheme;
-        setTheme(initialTheme);
+        setTimeout(() => setTheme(initialTheme), 0);
         document.documentElement.setAttribute("data-theme", initialTheme);
     }, []);
 

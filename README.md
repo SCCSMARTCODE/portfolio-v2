@@ -1,9 +1,9 @@
 # Emmanuel Ayobami | Product & AI Engineer
 
-Mathematical thinker building intelligent systems. Software Engineer & AI/ML Engineer bridging mathematical theory with practical solutions.
+Portfolio for Emmanuel Ayobami, focused on intelligent systems, scalable APIs, and production-ready software.
 
 ## Tech Stack
-- **Framework:** Next.js 14 (App Router)
+- **Framework:** Next.js 16 (App Router)
 - **Styling:** Tailwind CSS
 - **Language:** TypeScript
 - **Animations:** Framer Motion
@@ -23,3 +23,13 @@ bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
+## Docker
+
+Build and run the production image locally:
+
+```bash
+docker compose up --build
+```
+
+The app expects `NEXT_PUBLIC_SITE_URL` to be set in production so the sitemap, robots, and social preview URLs resolve correctly.

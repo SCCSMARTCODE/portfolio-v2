@@ -11,6 +11,8 @@
   --color-bg-secondary: var(--bg-secondary);
   --color-bg-tertiary: var(--bg-tertiary);
   --color-bg-glass: var(--bg-glass);
+  --color-border-primary: var(--border-primary);
+  --color-border-secondary: var(--border-secondary);
 
   --color-text-primary: var(--text-primary);
   --color-text-secondary: var(--text-secondary);
@@ -65,6 +67,8 @@
   --bg-secondary: #0f0f16;
   --bg-tertiary: #181824;
   --bg-glass: rgba(255, 255, 255, 0.03);
+  --border-primary: rgba(255, 255, 255, 0.1);
+  --border-secondary: rgba(255, 255, 255, 0.06);
 
   /* Text Colors */
   --text-primary: #ffffff;
@@ -95,6 +99,8 @@
   --bg-tertiary: #f1f5f9;
   /* Slate 100 */
   --bg-glass: rgba(255, 255, 255, 0.75);
+  --border-primary: rgba(15, 23, 42, 0.12);
+  --border-secondary: rgba(15, 23, 42, 0.08);
   /* Stronger Frosted Glass */
 
   /* Text Colors */
@@ -109,6 +115,67 @@
 body {
   background-color: var(--bg-primary);
   color: var(--text-primary);
+  min-height: 100vh;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -2;
+  background:
+    linear-gradient(var(--border-secondary) 1px, transparent 1px),
+    linear-gradient(90deg, var(--border-secondary) 1px, transparent 1px),
+    radial-gradient(circle at 18% 18%, rgba(99, 102, 241, 0.16), transparent 28rem),
+    radial-gradient(circle at 82% 28%, rgba(0, 212, 255, 0.1), transparent 24rem),
+    var(--bg-primary);
+  background-size: 48px 48px, 48px 48px, auto, auto, auto;
+}
+
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background: linear-gradient(180deg, rgba(5, 5, 7, 0.05), var(--bg-primary) 92%);
+}
+
+[data-theme="light"] body::after {
+  background: linear-gradient(180deg, rgba(248, 250, 252, 0.2), rgba(248, 250, 252, 0.9) 92%);
+}
+
+::selection {
+  background: var(--primary);
+  color: var(--bg-primary);
+}
+
+.section-kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  border: 1px solid var(--border-primary);
+  border-radius: 999px;
+  padding: 0.35rem 0.75rem;
+  color: var(--primary-light);
+  background: rgba(124, 58, 237, 0.1);
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.panel {
+  border: 1px solid var(--border-primary);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.055), rgba(255, 255, 255, 0.025));
+  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.28);
+}
+
+.mono-label {
+  font-family: var(--font-mono);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
 }
 
 /* Custom Scrollbar */

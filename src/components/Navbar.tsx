@@ -1,119 +1,125 @@
 "use client";
 
-import { useState, useEffect } from "react";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
-import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X } from "lucide-react";
+import { useEffect, useState } from "react";
+import { motion } from "framer-motion";
+import { AtSign, BriefcaseBusiness, Home, Menu, Microscope, X, Zap } from "lucide-react";
 import { clsx, type ClassValue } from "clsx";
 import { twMerge } from "tailwind-merge";
 import ThemeToggle from "./ThemeToggle";
 
 function cn(...inputs: ClassValue[]) {
-    return twMerge(clsx(inputs));
+  return twMerge(clsx(inputs));
 }
 
 const navLinks = [
-    { name: "Home", href: "/" },
-    { name: "About", href: "#about" },
-    { name: "Experience", href: "#experience" },
-    { name: "Projects", href: "#projects" },
-    { name: "Contact", href: "#contact" },
+  { name: "Home", href: "#home", icon: Home },
+  { name: "Experience", href: "#experience", icon: Zap },
+  { name: "Projects", href: "#projects", icon: Microscope },
+  { name: "Contact", href: "#contact", icon: AtSign },
 ];
 
 export default function Navbar() {
-    const [isScrolled, setIsScrolled] = useState(false);
-    const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-    
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
 
-    useEffect(() => {
-        const handleScroll = () => {
-            setIsScrolled(window.scrollY > 50);
-        };
-        window.addEventListener("scroll", handleScroll);
-        return () => window.removeEventListener("scroll", handleScroll);
-    }, []);
+  useEffect(() => {
+    const handleScroll = () => setIsScrolled(window.scrollY > 24);
+    handleScroll();
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
-    return (
-        <header
-            className={cn(
-                "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
-                isScrolled
-                    ? "bg-bg-glass backdrop-blur-md border-b border-border-primary py-4"
-                    : "bg-transparent py-6"
-            )}
-        >
-            <div className="container mx-auto px-6 flex items-center justify-between">
-                <Link href="/" className="text-2xl font-bold font-heading text-primary tracking-tight">
-                    EA<span className="text-accent">.</span>
-                </Link>
+  return (
+    <>
+      <header
+        className={cn(
+          "fixed inset-x-0 top-0 z-50 border-b transition-all duration-300",
+          isScrolled
+            ? "border-border-primary bg-bg-primary/82 py-3 backdrop-blur-xl"
+            : "border-transparent bg-transparent py-5",
+        )}
+      >
+        <div className="mx-auto flex max-w-7xl items-center justify-between px-5 md:px-8">
+          <Link
+            href="#home"
+            className="font-mono text-xs font-black tracking-[0.22em] text-text-primary"
+          >
+            SCC<span className="text-primary">SMART</span>CODE
+          </Link>
 
-                {/* Desktop Navigation */}
-                <nav className="hidden md:flex items-center gap-8">
-                    {navLinks.map((link) => (
-                        <Link
-                            key={link.name}
-                            href={link.href}
-                            className="text-sm font-medium text-text-secondary hover:text-primary transition-colors relative group"
-                        >
-                            {link.name}
-                            <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full" />
-                        </Link>
-                    ))}
-                    <ThemeToggle />
-                    <a
-                        href="#contact"
-                        className="px-4 py-2 rounded-full bg-primary/10 text-primary border border-primary/20 hover:bg-primary hover:text-bg-primary transition-all text-sm font-medium"
-                    >
-                        Contact Me
-                    </a>
-                </nav>
+          <nav className="hidden items-center gap-2 md:flex">
+            {navLinks.map((link) => (
+              <Link
+                key={link.name}
+                href={link.href}
+                className="rounded-full px-4 py-2 text-sm font-medium text-text-secondary transition hover:bg-bg-glass hover:text-text-primary"
+              >
+                {link.name}
+              </Link>
+            ))}
+          </nav>
 
-                {/* Mobile Menu Button */}
-                <button
-                    className="md:hidden text-text-primary p-2"
-                    onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-                    aria-label="Toggle menu"
-                >
-                    {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
-                </button>
+          <div className="hidden items-center gap-3 md:flex">
+            <ThemeToggle />
+            <a
+              href="#contact"
+              className="inline-flex items-center gap-2 rounded-md border border-primary/30 bg-primary px-4 py-2 text-sm font-bold text-bg-primary transition hover:bg-primary-light"
+            >
+              <BriefcaseBusiness size={16} />
+              Collaborate
+            </a>
+          </div>
+
+          <button
+            type="button"
+            className="rounded-md border border-border-primary bg-bg-glass p-2 text-text-primary md:hidden"
+            aria-label="Toggle menu"
+            onClick={() => setIsOpen((value) => !value)}
+          >
+            {isOpen ? <X size={20} /> : <Menu size={20} />}
+          </button>
+        </div>
+
+        {isOpen && (
+          <motion.nav
+            initial={{ opacity: 0, y: -8 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="mx-5 mt-4 rounded-lg border border-border-primary bg-bg-secondary/95 p-3 shadow-2xl backdrop-blur-xl md:hidden"
+          >
+            {navLinks.map((link) => (
+              <Link
+                key={link.name}
+                href={link.href}
+                onClick={() => setIsOpen(false)}
+                className="flex items-center gap-3 rounded-md px-3 py-3 text-sm font-semibold text-text-secondary hover:bg-bg-glass hover:text-text-primary"
+              >
+                <link.icon size={17} />
+                {link.name}
+              </Link>
+            ))}
+            <div className="mt-2 flex items-center justify-between border-t border-border-primary px-3 pt-3">
+              <span className="text-sm text-text-tertiary">Theme</span>
+              <ThemeToggle />
             </div>
+          </motion.nav>
+        )}
+      </header>
 
-            {/* Mobile Menu Overlay */}
-            <AnimatePresence>
-                {isMobileMenuOpen && (
-                    <motion.div
-                        initial={{ opacity: 0, y: -20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        exit={{ opacity: 0, y: -20 }}
-                        className="absolute top-full left-0 right-0 bg-bg-secondary border-b border-border-primary md:hidden"
-                    >
-                        <nav className="flex flex-col p-6 gap-4">
-                            {navLinks.map((link) => (
-                                <Link
-                                    key={link.name}
-                                    href={link.href}
-                                    className="text-lg font-medium text-text-secondary hover:text-primary transition-colors"
-                                    onClick={() => setIsMobileMenuOpen(false)}
-                                >
-                                    {link.name}
-                                </Link>
-                            ))}
-                            <div className="flex items-center gap-4 pt-4 border-t border-border-primary">
-                                <ThemeToggle />
-                                <span className="text-text-secondary">Switch Theme</span>
-                            </div>
-                            <a
-                                href="#contact"
-                                onClick={() => setIsMobileMenuOpen(false)}
-                                className="px-4 py-2 rounded-full bg-primary text-bg-primary text-center font-medium hover:bg-primary-dark transition-colors"
-                            >
-                                Contact Me
-                            </a>
-                        </nav>
-                    </motion.div>
-                )}
-            </AnimatePresence>
-        </header>
-    );
+      <nav className="fixed inset-x-4 bottom-4 z-50 rounded-xl border border-border-primary bg-bg-primary/88 p-2 shadow-2xl backdrop-blur-xl md:hidden">
+        <div className="grid grid-cols-4 gap-1">
+          {navLinks.map((link) => (
+            <Link
+              key={link.name}
+              href={link.href}
+              className="flex min-h-14 flex-col items-center justify-center gap-1 rounded-lg text-[0.65rem] font-bold text-text-secondary transition hover:bg-primary/15 hover:text-text-primary"
+            >
+              <link.icon size={18} />
+              {link.name}
+            </Link>
+          ))}
+        </div>
+      </nav>
+    </>
+  );
 }

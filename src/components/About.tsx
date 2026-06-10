@@ -1,153 +1,121 @@
 "use client";
 
 import { motion } from "framer-motion";
-import {
-  Brain,
-  Code,
-  Rocket,
-} from "lucide-react";
+import { Brain, Cpu, DatabaseZap, Rocket } from "lucide-react";
 
-const philosophies = [
+const principles = [
   {
-    icon: <Brain className="w-8 h-8 text-primary" />,
-    title: "Research-Driven Innovation",
+    icon: Brain,
+    title: "Research-grade reasoning",
     description:
-      "As a PROMETHEUS AI Research Team Member, I translate complex research papers into practical applications with solid theoretical foundations.",
+      "I translate papers, model behavior, and mathematical foundations into systems with measurable product value.",
   },
   {
-    icon: <Rocket className="w-8 h-8 text-secondary" />,
-    title: "Production Excellence",
+    icon: Cpu,
+    title: "Systems ownership",
     description:
-      "Currently building Inkriv - an AI-powered writing assistant with advanced LLM capabilities, retrieval systems, and AI memory.",
+      "I design backend, data, deployment, and frontend flows as one coherent production surface.",
   },
   {
-    icon: <Code className="w-8 h-8 text-accent" />,
-    title: "Continuous Learning",
+    icon: Rocket,
+    title: "Product acceleration",
     description:
-      "ALX Software Engineering Graduate with a systematic approach to building innovative solutions that solve real-world problems.",
+      "I build quickly without losing the fundamentals: reliability, maintainability, and user intent.",
   },
 ];
 
 const skills = [
   "Python",
-  "Deep Learning",
-  "Machine Learning",
   "PyTorch",
-  "C",
-  "C++",
-  "Flask",
+  "Deep Learning",
   "FastAPI",
-  "SQL",
+  "RAG Systems",
+  "Agentic AI",
   "PostgreSQL",
   "Docker",
-  "RAG Systems",
+  "Next.js",
+  "React",
+  "C",
+  "C++",
+  "System Architecture",
+  "MLOps",
   "Multi-model AI",
-  "Git",
-  "GitHub",
 ];
 
 export default function About() {
   return (
-    <section id="about" className="py-20 relative overflow-hidden">
-      <div className="container mx-auto px-6 relative z-10">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
-          className="text-center mb-16"
-        >
-          <h2 className="text-4xl font-bold font-heading mb-4">About Me</h2>
-          <div className="w-20 h-1 bg-gradient-to-r from-primary to-secondary mx-auto rounded-full" />
-          <p className="mt-4 text-text-secondary max-w-2xl mx-auto">
-            Engineering the future through innovation and precision.
-          </p>
-        </motion.div>
-
-        <div className="grid md:grid-cols-2 gap-12 items-center mb-20">
+    <section id="about" className="relative overflow-hidden py-20 md:py-28">
+      <div className="mx-auto max-w-7xl px-5 md:px-8">
+        <div className="grid gap-12 lg:grid-cols-[0.82fr_1.18fr] lg:items-start">
           <motion.div
-            initial={{ opacity: 0, x: -50 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, y: 18 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
           >
-            <div className="mb-8 relative w-48 h-48 md:w-56 md:h-56">
-              <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-primary to-secondary animate-pulse-glow opacity-50 blur-md"></div>
-              <img
-                src="/sccsmartcode-profile.jpeg"
-                alt="Emmanuel Ayobami (SCCSMARTCODE) Profile"
-                className="relative z-10 w-full h-full object-cover rounded-full border-4 border-bg-secondary shadow-2xl"
-              />
-            </div>
-            <h3 className="text-3xl font-bold mb-6">
-              Hello, I&apos;m <span className="text-primary">Emmanuel Ayobami</span> (SCCSMARTCODE)
-            </h3>
-            <p className="text-text-secondary text-lg leading-relaxed mb-6">
-              Passionate{" "}
-              <strong className="text-text-primary">
-                Machine Learning Researcher & AI Systems Lead
-              </strong>{" "}
-              driven by the mathematical foundations that power our digital
-              world. I am constantly seeking opportunities to drive cutting-edge ML research and build the next big thing.
-            </p>
-            <p className="text-text-secondary text-lg leading-relaxed">
-              I specialize in building intelligent architectures, from advanced Agentic Orchestration and Deep Learning to real-time Personalization engines. I design scalable backends and engineer robust systems that bridge the gap between rigorous mathematical theory and practical, production-ready AI products.
+            <span className="section-kicker">
+              <DatabaseZap size={14} />
+              Operating System
+            </span>
+            <h2 className="mt-6 max-w-xl font-heading text-4xl font-black leading-tight md:text-6xl">
+              Architecting AI that survives contact with reality.
+            </h2>
+            <p className="mt-6 max-w-xl text-lg leading-8 text-text-secondary">
+              I work across machine learning research, backend architecture, and
+              full-stack product delivery. My strongest zone is turning a
+              complex model or workflow into a clear, reliable system people can
+              actually use, including the Inkriv AI writing and personalization
+              stack.
             </p>
           </motion.div>
 
-          <motion.div
-            initial={{ opacity: 0, x: 50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
-            className="grid gap-6"
-          >
-            {philosophies.map((item, index) => (
+          <div className="grid gap-4">
+            {principles.map((item, index) => (
               <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
+                key={item.title}
+                initial={{ opacity: 0, y: 16 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="p-6 rounded-2xl bg-bg-glass border border-border-primary hover:border-primary/50 transition-colors"
+                transition={{ duration: 0.45, delay: index * 0.08 }}
+                className="panel rounded-lg p-6"
               >
-                <div className="flex items-start gap-4">
-                  <div className="p-3 rounded-lg bg-bg-secondary/50">
-                    {item.icon}
+                <div className="flex gap-5">
+                  <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-md border border-border-primary bg-bg-primary/60 text-primary">
+                    <item.icon size={22} />
                   </div>
                   <div>
-                    <h4 className="text-xl font-bold mb-2">{item.title}</h4>
-                    <p className="text-text-secondary text-sm">
+                    <h3 className="text-xl font-black">{item.title}</h3>
+                    <p className="mt-2 leading-7 text-text-secondary">
                       {item.description}
                     </p>
                   </div>
                 </div>
               </motion.div>
             ))}
-          </motion.div>
+          </div>
         </div>
 
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 18 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
+          className="mt-16 border-t border-border-primary pt-9"
         >
-          <h3 className="text-2xl font-bold mb-8 text-center">
-            Technical Arsenal
-          </h3>
-          <div className="flex flex-wrap justify-center gap-4">
-            {skills.map((skill, index) => (
-              <motion.span
-                key={index}
-                initial={{ opacity: 0, scale: 0.8 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.3, delay: index * 0.05 }}
-                className="px-6 py-3 rounded-full bg-bg-secondary border border-border-primary text-text-secondary hover:text-primary hover:border-primary transition-all cursor-default"
+          <div className="mb-7 flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
+            <h3 className="font-heading text-2xl font-black">Technical Arsenal</h3>
+            <p className="mono-label text-xs text-text-tertiary">
+              Research / Systems / Product
+            </p>
+          </div>
+          <div className="flex flex-wrap gap-3">
+            {skills.map((skill) => (
+              <span
+                key={skill}
+                className="rounded-md border border-border-primary bg-bg-secondary/55 px-4 py-2 font-mono text-xs font-bold text-text-secondary transition hover:border-primary/50 hover:text-primary"
               >
                 {skill}
-              </motion.span>
+              </span>
             ))}
           </div>
         </motion.div>

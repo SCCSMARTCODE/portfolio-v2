@@ -3,7 +3,8 @@ import { siteConfig } from "@/lib/site";
 
 export const runtime = "edge";
 
-export const alt = `${siteConfig.shortName} portfolio preview`;
+export const alt =
+  "Emmanuel Adewumi, SCCSMARTCODE, Inkriv Founding AI Engineer portfolio preview";
 export const size = {
   width: 1200,
   height: 630,
@@ -52,15 +53,17 @@ export default function Image() {
           </div>
           <span>{siteConfig.shortName}</span>
         </div>
-        <div style={{ fontSize: 18, color: "#94a3b8" }}>Official portfolio</div>
+        <div style={{ fontSize: 18, color: "#94a3b8" }}>
+          Inkriv engineer profile
+        </div>
       </div>
 
       <div style={{ maxWidth: 920, display: "flex", flexDirection: "column", gap: 24 }}>
         <div style={{ fontSize: 74, lineHeight: 1.02, fontWeight: 800 }}>
-          Machine Learning Researcher & AI Systems Lead.
+          Inkriv Founding AI Engineer & ML Researcher.
         </div>
         <div style={{ fontSize: 30, lineHeight: 1.4, color: "#cbd5e1", maxWidth: 820 }}>
-          Building intelligent architectures, predictive AI models, and production-ready systems for platforms like Inkriv and Zeviel Law Firm.
+          Emmanuel Adewumi, known as SCCSMARTCODE, builds AI writing systems, agentic orchestration, and production-ready intelligent architectures.
           <div style={{ fontSize: 18, color: "#64748b" }}>SEO-ready deployment</div>
         </div>
       </div>

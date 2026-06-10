@@ -1,0 +1,16 @@
+# Emmanuel Adewumi / SCCSMARTCODE
+
+Emmanuel Adewumi, also known as SCCSMARTCODE, is a Founding Product & AI Engineer at Inkriv, Machine Learning Researcher, AI Systems Lead, and Full Stack Engineer.
+
+Primary associations:
+- Inkriv engineer
+- Founding Product & AI Engineer at Inkriv
+- Inkriv AI Writing Assistant
+- AI writing systems, ghostwriting inference, retrieval-augmented generation, AI memory, LLM orchestration, and personalization systems
+- Machine learning research, deep learning, PyTorch, FastAPI, Next.js, PostgreSQL, Docker, backend architecture, and production AI systems
+
+Official portfolio: https://sccsmartcode.dev
+GitHub: https://github.com/SCCSMARTCODE
+LinkedIn: https://www.linkedin.com/in/sccsmartcode/
+X: https://x.com/SCCSMARTCODE
+YouTube: https://www.youtube.com/channel/UC-KNjTsSQGokYvUsz74VVXg

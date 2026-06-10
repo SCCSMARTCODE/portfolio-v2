@@ -1,172 +1,164 @@
 "use client";
 
-import { motion, AnimatePresence } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import { useState } from "react";
-import {
-  Github,
-  ExternalLink,
-  Star,
-  } from "lucide-react";
+import { ArrowUpRight, Github, Microscope, Star } from "lucide-react";
 
 const projects = [
   {
     title: "SafeX Labs",
     description:
-      "Intelligent, privacy-aware edge surveillance system designed for real-time situational awareness. Features a two-layer intelligence architecture using Multimodal LLMs for frame classification and contextual analysis. Highly configurable and adaptive, providing autonomous decision-making at the edge.",
-    tags: [
-      "Edge AI",
-      "Multimodal LLM",
-      "Computer Vision",
-      "LangChain",
-      "Privacy-First",
-    ],
+      "Privacy-aware edge surveillance using multimodal LLMs for real-time frame classification, contextual analysis, and autonomous decision-making.",
+    tags: ["Edge AI", "Multimodal LLM", "Computer Vision"],
     category: "AI & ML",
     github: null,
     demo: null,
     stars: null,
     featured: true,
+    tone: "from-cyan-500/16",
   },
   {
     title: "Inkriv AI Writing Assistant",
     description:
-      "AI-powered writing assistant with personalized, adaptive AI. Built complete system from scratch at VingtAI, including ghostwriting pipeline, retrieval engine, and multi-model orchestration.",
-    tags: ["FastAPI", "Advanced LLM", "RAG", "AI Memory", "PostgreSQL"],
+      "Inkriv engineering work on an adaptive AI writing assistant with ghostwriting inference, retrieval, memory, and multi-model orchestration.",
+    tags: ["Inkriv", "FastAPI", "RAG", "AI Memory"],
     category: "AI & ML",
     github: null,
     demo: null,
     stars: null,
     featured: true,
+    tone: "from-violet-500/18",
   },
   {
     title: "CChatAPP",
     description:
-      "System engineering project built entirely in C from scratch using Socket Programming and GTK for the GUI. Demonstrates low-level network programming, memory management, and client-server architecture without reliance on high-level frameworks.",
-    tags: [
-      "C",
-      "Socket Programming",
-      "GTK",
-      "System Engineering",
-      "Network Programming",
-    ],
+      "Low-level chat system built in C with socket programming and GTK, demonstrating memory management and client-server design.",
+    tags: ["C", "POSIX Sockets", "GTK"],
     category: "Systems",
     github: "https://github.com/SCCSMARTCODE/CChatAPP",
     demo: null,
     stars: "-",
     featured: true,
+    tone: "from-emerald-500/16",
   },
   {
-    title: "Attention is All You Need",
+    title: "Attention from Scratch",
     description:
-      "Complete implementation of the groundbreaking Transformer architecture from the 'Attention is All You Need' paper. Deep dive into self-attention and positional encoding.",
-    tags: ["PyTorch", "Transformers", "Attention", "From Scratch"],
+      "Transformer implementation from first principles, focused on self-attention, positional encodings, and model internals.",
+    tags: ["PyTorch", "Mathematics", "Transformers"],
     category: "AI & ML",
-    github:
-      "https://github.com/SCCSMARTCODE/attention-is-all-you-need-from-scratch",
+    github: "https://github.com/SCCSMARTCODE/attention-is-all-you-need-from-scratch",
     demo: null,
     stars: "1",
+    featured: false,
+    tone: "from-sky-500/14",
   },
   {
     title: "GPT-2 from Scratch",
     description:
-      "Complete implementation of GPT-2 architecture from scratch, providing deep understanding of generative pre-trained transformers. Includes attention mechanisms and training pipelines.",
-    tags: ["PyTorch", "Transformers", "NLP", "From Scratch"],
+      "Complete GPT-2 architecture implementation with attention mechanisms and training pipeline fundamentals.",
+    tags: ["PyTorch", "NLP", "From Scratch"],
     category: "AI & ML",
     github: "https://github.com/SCCSMARTCODE/gpt2-from-scratch",
     demo: null,
     stars: "-",
+    featured: false,
+    tone: "from-fuchsia-500/14",
   },
   {
     title: "RAG Grammar Enhancer",
     description:
-      "Real-time language refinement system using Retrieval-Augmented Generation. Corrects grammar and fluency issues while providing contextually relevant suggestions.",
-    tags: ["RAG", "NLP", "Grammar", "Retrieval"],
+      "Real-time language refinement system using retrieval-augmented generation for contextual grammar and fluency suggestions.",
+    tags: ["RAG", "NLP", "Retrieval"],
     category: "AI & ML",
     github: "https://github.com/SCCSMARTCODE/RAG-Grammar-Enhancer",
     demo: null,
     stars: "-",
+    featured: false,
+    tone: "from-amber-500/14",
   },
   {
     title: "VerisBot",
     description:
-      "Production-grade enterprise AI chatbot built with FastAPI and powered by Hugging Face Inference API. Features Google Gemma-2-2b-it model for accurate responses.",
-    tags: ["FastAPI", "AI Chatbot", "Gemma-2", "Production"],
+      "Enterprise AI chatbot built with FastAPI and Hugging Face inference for production-grade conversational workflows.",
+    tags: ["FastAPI", "Gemma-2", "Production"],
     category: "APIs",
     github: "https://github.com/SCCSMARTCODE/VerisBot",
     demo: null,
     stars: "-",
+    featured: false,
+    tone: "from-indigo-500/14",
   },
   {
     title: "LinguaSync",
     description:
-      "Neural Machine Translation system with Transformer architecture. Features Flask web interface and Docker containerization for scalable deployment.",
-    tags: ["Transformers", "Translation", "Flask", "Docker"],
+      "Neural machine translation app with Transformer architecture, Flask interface, and Dockerized deployment.",
+    tags: ["Transformers", "Translation", "Docker"],
     category: "AI & ML",
     github: "https://github.com/SCCSMARTCODE/LinguaSync",
     demo: null,
     stars: "-",
+    featured: false,
+    tone: "from-teal-500/14",
   },
   {
     title: "SMP MultiSchool Website",
     description:
-      "Comprehensive digital learning platform for multi-school academic collaboration and resource management.",
+      "Digital learning platform for multi-school academic collaboration, resources, and management workflows.",
     tags: ["Flask", "Education", "Web App"],
     category: "Web Dev",
     github: "https://github.com/SCCSMARTCODE/SMP-MultiSchool-Website-Project",
     demo: null,
     stars: "-",
-  },
-  {
-    title: "EchoDAT",
-    description:
-      "Innovative web application for music groups to enhance collaboration, share resources, and coordinate activities.",
-    tags: ["Web App", "Music", "Collaboration"],
-    category: "Web Dev",
-    github: "https://github.com/SCCSMARTCODE/EchoDAT",
-    demo: null,
-    stars: "-",
+    featured: false,
+    tone: "from-rose-500/14",
   },
 ];
 
-const categories = ["All", "AI & ML", "Web Dev", "APIs", "Systems"];
+const categories = ["All", "AI & ML", "Systems", "APIs", "Web Dev"];
 
 export default function Projects() {
   const [activeCategory, setActiveCategory] = useState("All");
-
   const filteredProjects =
     activeCategory === "All"
       ? projects
       : projects.filter((project) => project.category === activeCategory);
 
   return (
-    <section id="projects" className="py-20 relative">
-      <div className="container mx-auto px-6 relative z-10">
+    <section id="projects" className="relative overflow-hidden py-20 md:py-28">
+      <div className="mx-auto max-w-7xl px-5 md:px-8">
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 18 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="text-center mb-16"
+          className="mb-10 flex flex-col gap-6 md:flex-row md:items-end md:justify-between"
         >
-          <h2 className="text-4xl font-bold font-heading mb-4">
-            Featured Projects
-          </h2>
-          <div className="w-20 h-1 bg-gradient-to-r from-primary to-secondary mx-auto rounded-full" />
-          <p className="mt-4 text-text-secondary max-w-2xl mx-auto">
-            A showcase of my latest work in AI, machine learning, and software
-            engineering.
-          </p>
+          <div className="max-w-2xl">
+            <span className="section-kicker">
+              <Microscope size={14} />
+              8+ Projects
+            </span>
+            <h2 className="mt-6 font-heading text-4xl font-black leading-tight md:text-6xl">
+              Featured Innovations
+            </h2>
+            <p className="mt-5 text-lg leading-8 text-text-secondary">
+              A curated selection of technical research, systems engineering,
+              and machine learning implementations.
+            </p>
+          </div>
         </motion.div>
 
-        {/* Category Filter */}
-        <div className="flex justify-center gap-4 mb-12 flex-wrap">
+        <div className="mb-10 flex gap-3 overflow-x-auto pb-2">
           {categories.map((category) => (
             <button
               key={category}
+              type="button"
               onClick={() => setActiveCategory(category)}
-              className={`px-6 py-2 rounded-full border transition-all ${
+              className={`shrink-0 rounded-md border px-5 py-2.5 font-mono text-xs font-bold tracking-[0.1em] transition ${
                 activeCategory === category
-                  ? "bg-primary border-primary text-bg-primary font-medium"
-                  : "bg-bg-secondary border-border-primary text-text-secondary hover:border-primary hover:text-primary"
+                  ? "border-primary bg-primary/18 text-primary-light"
+                  : "border-border-primary bg-bg-secondary/45 text-text-secondary hover:border-primary/50 hover:text-primary"
               }`}
             >
               {category}
@@ -174,44 +166,43 @@ export default function Projects() {
           ))}
         </div>
 
-        <motion.div layout className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <AnimatePresence>
-            {filteredProjects.map((project, index) => (
-              <motion.div
+        <motion.div layout className="grid gap-5 md:grid-cols-2 xl:grid-cols-3">
+          <AnimatePresence mode="popLayout">
+            {filteredProjects.map((project) => (
+              <motion.article
                 layout
-                initial={{ opacity: 0, scale: 0.9 }}
-                animate={{ opacity: 1, scale: 1 }}
-                exit={{ opacity: 0, scale: 0.9 }}
-                transition={{ duration: 0.3 }}
                 key={project.title}
-                className={`group rounded-2xl bg-bg-glass border border-border-primary overflow-hidden hover:border-primary/50 transition-all hover:shadow-glow ${
-                  project.featured
-                    ? "md:col-span-2 lg:col-span-2 bg-gradient-to-br from-bg-glass to-primary/5"
-                    : ""
+                initial={{ opacity: 0, y: 16 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, scale: 0.96 }}
+                transition={{ duration: 0.28 }}
+                className={`panel group relative min-h-[22rem] overflow-hidden rounded-lg bg-gradient-to-br ${project.tone} to-transparent p-6 ${
+                  project.featured ? "md:min-h-[25rem]" : ""
                 }`}
               >
-                <div className="p-8 h-full flex flex-col">
-                  <div className="flex justify-between items-start mb-6">
-                    <div className="flex gap-2 flex-wrap">
+                <div className="absolute inset-0 opacity-[0.08] [background-image:radial-gradient(circle_at_1px_1px,currentColor_1px,transparent_0)] [background-size:22px_22px]" />
+                <div className="relative flex h-full flex-col">
+                  <div className="mb-10 flex items-start justify-between gap-4">
+                    <div className="flex flex-wrap gap-2">
                       {project.featured && (
-                        <span className="px-3 py-1 rounded-full bg-primary/20 text-primary text-xs font-bold border border-primary/20">
+                        <span className="rounded-full border border-primary/35 bg-primary/15 px-3 py-1 font-mono text-[0.66rem] font-black tracking-[0.12em] text-primary-light">
                           FEATURED
                         </span>
                       )}
-                      <span className="px-3 py-1 rounded-full bg-bg-secondary text-text-tertiary text-xs font-medium border border-border-secondary">
+                      <span className="rounded-full border border-border-primary bg-bg-primary/45 px-3 py-1 font-mono text-[0.66rem] font-bold text-text-secondary">
                         {project.category}
                       </span>
                     </div>
-                    <div className="flex gap-3">
+                    <div className="flex items-center gap-3">
                       {project.github && (
                         <a
                           href={project.github}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="text-text-tertiary hover:text-primary transition-colors"
-                          title="View Code"
+                          aria-label={`${project.title} code`}
+                          className="text-text-secondary transition hover:text-primary"
                         >
-                          <Github size={20} />
+                          <Github size={19} />
                         </a>
                       )}
                       {project.demo && (
@@ -219,44 +210,43 @@ export default function Projects() {
                           href={project.demo}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="text-text-tertiary hover:text-primary transition-colors"
-                          title="Live Demo"
+                          aria-label={`${project.title} demo`}
+                          className="text-text-secondary transition hover:text-primary"
                         >
-                          <ExternalLink size={20} />
+                          <ArrowUpRight size={20} />
                         </a>
                       )}
                     </div>
                   </div>
 
-                  <h3 className="text-2xl font-bold font-heading mb-3 group-hover:text-primary transition-colors">
-                    {project.title}
-                  </h3>
-                  <p className="text-text-secondary mb-6 leading-relaxed flex-grow">
-                    {project.description}
-                  </p>
+                  <div className="mt-auto">
+                    <h3 className="font-heading text-2xl font-black transition group-hover:text-primary-light md:text-3xl">
+                      {project.title}
+                    </h3>
+                    <p className="mt-3 leading-7 text-text-secondary">
+                      {project.description}
+                    </p>
 
-                  <div className="flex flex-wrap gap-2 mt-auto">
-                    {project.tags.map((tag) => (
-                      <span
-                        key={tag}
-                        className="px-3 py-1 rounded-md bg-bg-secondary/50 text-text-tertiary text-xs border border-border-secondary"
-                      >
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
-
-                  {project.stars && project.stars !== "-" && (
-                    <div className="mt-4 flex items-center gap-1 text-xs text-text-tertiary">
-                      <Star
-                        size={12}
-                        className="text-yellow-500 fill-yellow-500"
-                      />
-                      <span>{project.stars} stars</span>
+                    <div className="mt-6 flex flex-wrap gap-2">
+                      {project.tags.map((tag) => (
+                        <span
+                          key={tag}
+                          className="rounded border border-border-primary bg-bg-primary/55 px-3 py-1 font-mono text-[0.68rem] font-bold text-text-secondary"
+                        >
+                          {tag}
+                        </span>
+                      ))}
                     </div>
-                  )}
+
+                    {project.stars && project.stars !== "-" && (
+                      <div className="mt-5 flex items-center gap-1 text-xs text-text-tertiary">
+                        <Star size={13} className="fill-amber-400 text-amber-400" />
+                        {project.stars} star
+                      </div>
+                    )}
+                  </div>
                 </div>
-              </motion.div>
+              </motion.article>
             ))}
           </AnimatePresence>
         </motion.div>

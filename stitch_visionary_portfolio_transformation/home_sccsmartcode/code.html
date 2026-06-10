@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Emmanuel Adewumi | Research-driven Innovation</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&amp;family=Space+Mono:wght@400;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-primary": "#1000a9",
+                        "secondary-fixed": "#f0dbff",
+                        "primary-container": "#8083ff",
+                        "primary-fixed-dim": "#c0c1ff",
+                        "border-subtle": "rgba(255, 255, 255, 0.08)",
+                        "surface-dim": "#131315",
+                        "on-error": "#690005",
+                        "surface": "#131315",
+                        "data-node": "#22c55e",
+                        "on-primary-fixed": "#07006c",
+                        "tertiary": "#89ceff",
+                        "inverse-primary": "#494bd6",
+                        "on-error-container": "#ffdad6",
+                        "error": "#ffb4ab",
+                        "background": "#131315",
+                        "outline-variant": "#464554",
+                        "on-background": "#e5e1e4",
+                        "inverse-surface": "#e5e1e4",
+                        "on-tertiary-fixed-variant": "#004c6e",
+                        "secondary-fixed-dim": "#ddb7ff",
+                        "on-tertiary": "#00344d",
+                        "on-primary-fixed-variant": "#2f2ebe",
+                        "on-secondary": "#490080",
+                        "primary": "#c0c1ff",
+                        "surface-container-lowest": "#0e0e10",
+                        "surface-glass": "rgba(24, 24, 27, 0.6)",
+                        "on-primary-container": "#0d0096",
+                        "secondary": "#ddb7ff",
+                        "surface-charcoal": "#18181b",
+                        "on-surface-variant": "#c7c4d7",
+                        "inverse-on-surface": "#313032",
+                        "on-tertiary-fixed": "#001e2f",
+                        "outline": "#908fa0",
+                        "surface-tint": "#c0c1ff",
+                        "vibrant-purple": "#a855f7",
+                        "on-secondary-fixed-variant": "#6900b3",
+                        "on-surface": "#e5e1e4",
+                        "surface-container-high": "#2a2a2c",
+                        "on-tertiary-container": "#002d43",
+                        "tertiary-container": "#009ada",
+                        "surface-bright": "#39393b",
+                        "tertiary-fixed-dim": "#89ceff",
+                        "electric-indigo": "#6366f1",
+                        "surface-container-highest": "#353437",
+                        "on-secondary-fixed": "#2c0051",
+                        "error-container": "#93000a",
+                        "tertiary-fixed": "#c9e6ff",
+                        "surface-container-low": "#1c1b1d",
+                        "secondary-container": "#6f00be",
+                        "primary-fixed": "#e1e0ff",
+                        "surface-container": "#201f22",
+                        "surface-variant": "#353437",
+                        "on-secondary-container": "#d6a9ff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "gutter": "24px",
+                        "margin-mobile": "20px",
+                        "unit": "8px",
+                        "margin-desktop": "80px",
+                        "container-max": "1200px"
+                    },
+                    "fontFamily": {
+                        "display-lg": ["Plus Jakarta Sans"],
+                        "label-caps": ["Space Mono"],
+                        "body-md": ["Plus Jakarta Sans"],
+                        "display-xl": ["Plus Jakarta Sans"],
+                        "headline-lg": ["Plus Jakarta Sans"],
+                        "body-lg": ["Plus Jakarta Sans"],
+                        "headline-lg-mobile": ["Plus Jakarta Sans"],
+                        "label-mono": ["Space Mono"]
+                    },
+                    "fontSize": {
+                        "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "label-caps": ["12px", { "lineHeight": "16px", "letterSpacing": "0.1em", "fontWeight": "700" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "display-xl": ["72px", { "lineHeight": "80px", "letterSpacing": "-0.04em", "fontWeight": "800" }],
+                        "headline-lg": ["32px", { "lineHeight": "40px", "fontWeight": "600" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "headline-lg-mobile": ["28px", { "lineHeight": "36px", "fontWeight": "600" }],
+                        "label-mono": ["14px", { "lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body {
+            background-color: theme('colors.background');
+            color: theme('colors.on-background');
+        }
+        .bg-data-stream {
+            background: linear-gradient(180deg, rgba(19,19,21,1) 0%, rgba(24,24,27,0.8) 50%, rgba(19,19,21,1) 100%),
+                        radial-gradient(circle at 50% 0%, rgba(99,102,241,0.15) 0%, transparent 50%);
+            background-size: 100% 200%;
+            animation: dataStream 15s ease-in-out infinite;
+        }
+        @keyframes dataStream {
+            0% { background-position: 0% 0%; }
+            50% { background-position: 0% 100%; }
+            100% { background-position: 0% 0%; }
+        }
+        .glass-panel {
+            background: theme('colors.surface-glass');
+            backdrop-filter: blur(12px);
+            border: 1px solid theme('colors.border-subtle');
+        }
+        .glow-indigo {
+            box-shadow: 0 0 20px rgba(99, 102, 241, 0.15);
+        }
+    </style>
+</head>
+<body class="antialiased min-h-screen flex flex-col">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-surface-glass text-primary dark:text-primary font-headline-lg-mobile text-headline-lg-mobile font-label-caps text-label-caps tracking-widest text-primary dark:text-primary backdrop-blur-xl border-b border-border-subtle flex justify-between items-center px-margin-mobile h-16 w-full">
+<button class="text-on-surface-variant hover:text-vibrant-purple transition-colors scale-95 duration-200">
+<span class="material-symbols-outlined" data-icon="menu">menu</span>
+</button>
+<span class="font-label-caps text-label-caps tracking-widest text-primary dark:text-primary">SCCSMARTCODE</span>
+<div class="w-6 h-6"></div> <!-- Placeholder for balance -->
+</header>
+<!-- Main Content Canvas -->
+<main class="flex-grow flex flex-col bg-data-stream pt-16 pb-24 md:pb-0 relative overflow-hidden">
+<!-- Subtle Grid Pattern Overlay -->
+<div class="absolute inset-0 z-0 pointer-events-none" style="background-image: linear-gradient(theme('colors.border-subtle') 1px, transparent 1px), linear-gradient(90deg, theme('colors.border-subtle') 1px, transparent 1px); background-size: 48px 48px; opacity: 0.2;"></div>
+<!-- Hero Section -->
+<section class="relative z-10 flex flex-col items-center justify-center min-h-[80vh] px-margin-mobile text-center">
+<!-- Profile Image Container -->
+<div class="relative w-32 h-32 md:w-40 md:h-40 mb-8 rounded-full p-1 bg-gradient-to-br from-electric-indigo to-vibrant-purple glow-indigo">
+<div class="absolute inset-0 rounded-full border border-border-subtle mix-blend-overlay"></div>
+<img alt="Profile Image" class="w-full h-full object-cover rounded-full mix-blend-luminosity hover:mix-blend-normal transition-all duration-500" src="https://lh3.googleusercontent.com/aida/AP1WRLus1WAU07M6Gy6JnzXIC7O8UXODUvW3Co-eotQk6eztntiomSAy49-XRd2WDgDMmIcOxP-KT_dTSsWcnrkj7vJ7AQvQSI71EH0LZGwM4abhPZ8tOsgewKe5o3W-8ZosPT8sB74vlwSikF-1RDpaJhG5v-mjAMUyIIp_vdhRZC7dIe7H6J_Q5qsJnhuRxB5Sv-RX7r4B_-K9hiiF5o8tgEGp3Ie1eOHHwPmyesRpcXyB6jhc1BoO9V4rmZE"/>
+</div>
+<h1 class="font-display-lg text-display-lg md:font-display-xl md:text-display-xl text-on-surface mb-4 tracking-tight">Emmanuel Adewumi</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto mb-10">Engineering the intersection of Mathematics and Machine Learning.</p>
+<!-- Actions -->
+<div class="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
+<button class="bg-electric-indigo text-white font-label-mono text-label-mono py-3 px-8 rounded flex items-center justify-center gap-2 hover:bg-vibrant-purple transition-colors glow-indigo">
+<span class="material-symbols-outlined" data-icon="auto_awesome">auto_awesome</span>
+                    Explore Research
+                </button>
+<button class="bg-transparent border border-border-subtle text-on-surface font-label-mono text-label-mono py-3 px-8 rounded hover:bg-white/5 hover:border-white/40 transition-colors flex items-center justify-center gap-2">
+<span class="material-symbols-outlined" data-icon="code">code</span>
+                    View Projects
+                </button>
+</div>
+</section>
+<!-- Stats Grid (Bento Style) -->
+<section class="relative z-10 px-margin-mobile md:px-margin-desktop w-full max-w-container-max mx-auto mb-20">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<!-- Stat Card 1 -->
+<div class="glass-panel p-6 rounded-lg flex flex-col justify-between items-start hover:border-electric-indigo transition-colors group">
+<span class="material-symbols-outlined text-electric-indigo mb-4 group-hover:scale-110 transition-transform" data-icon="memory">memory</span>
+<div>
+<h3 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface">5+</h3>
+<p class="font-label-mono text-label-mono text-on-surface-variant mt-1">AI Products Deployed</p>
+</div>
+</div>
+<!-- Stat Card 2 -->
+<div class="glass-panel p-6 rounded-lg flex flex-col justify-between items-start hover:border-vibrant-purple transition-colors group">
+<span class="material-symbols-outlined text-vibrant-purple mb-4 group-hover:scale-110 transition-transform" data-icon="science">science</span>
+<div>
+<h3 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface">PROMETHEUS</h3>
+<p class="font-label-mono text-label-mono text-on-surface-variant mt-1">Research Initiative</p>
+</div>
+</div>
+<!-- Stat Card 3 -->
+<div class="glass-panel p-6 rounded-lg flex flex-col justify-between items-start hover:border-tertiary transition-colors group">
+<span class="material-symbols-outlined text-tertiary mb-4 group-hover:scale-110 transition-transform" data-icon="school">school</span>
+<div>
+<h3 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface">ALX</h3>
+<p class="font-label-mono text-label-mono text-on-surface-variant mt-1">Alumni Network</p>
+</div>
+</div>
+</div>
+</section>
+<!-- About Excerpt -->
+<section class="relative z-10 px-margin-mobile md:px-margin-desktop w-full max-w-container-max mx-auto mb-20">
+<div class="bg-surface-charcoal border border-border-subtle rounded-xl p-8 md:p-12 relative overflow-hidden">
+<!-- Decorative element -->
+<div class="absolute top-0 right-0 w-32 h-32 bg-electric-indigo opacity-5 blur-[60px] rounded-full"></div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-4 flex items-center gap-3">
+<span class="material-symbols-outlined text-electric-indigo" data-icon="functions">functions</span>
+                    Where Mathematics Meets Code.
+                </h2>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-3xl leading-relaxed">
+                    Dedicated to architecting robust, scalable AI solutions. My work bridges the gap between theoretical mathematics and practical machine learning engineering, delivering high-performance algorithms that solve complex, real-world problems in dynamic data environments.
+                </p>
+<div class="mt-8 flex flex-wrap gap-2">
+<span class="font-label-caps text-label-caps bg-background border border-border-subtle text-on-surface-variant px-3 py-1 rounded hover:border-electric-indigo transition-colors cursor-default">PyTorch</span>
+<span class="font-label-caps text-label-caps bg-background border border-border-subtle text-on-surface-variant px-3 py-1 rounded hover:border-electric-indigo transition-colors cursor-default">TensorFlow</span>
+<span class="font-label-caps text-label-caps bg-background border border-border-subtle text-on-surface-variant px-3 py-1 rounded hover:border-electric-indigo transition-colors cursor-default">Kubernetes</span>
+<span class="font-label-caps text-label-caps bg-background border border-border-subtle text-on-surface-variant px-3 py-1 rounded hover:border-electric-indigo transition-colors cursor-default">CUDA</span>
+</div>
+</div>
+</section>
+</main>
+<!-- BottomNavBar (Mobile Only) -->
+<nav class="md:hidden bg-surface-glass text-electric-indigo font-label-mono text-label-mono font-label-caps text-label-caps text-primary fixed bottom-6 left-1/2 -translate-x-1/2 w-[90%] rounded-full z-50 backdrop-blur-md border border-border-subtle shadow-[0_0_20px_rgba(99,102,241,0.15)] flex justify-around items-center py-3">
+<!-- Home (Active) -->
+<a class="flex flex-col items-center justify-center text-primary bg-primary-container/20 rounded-full px-4 py-1 hover:text-primary transition-all active:scale-90 transition-transform" href="#">
+<span class="material-symbols-outlined" data-icon="home" style="font-variation-settings: 'FILL' 1;">home</span>
+<span class="text-[10px] mt-1">Home</span>
+</a>
+<!-- Experience (Inactive) -->
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:text-primary transition-all active:scale-90 transition-transform" href="#">
+<span class="material-symbols-outlined" data-icon="timeline">timeline</span>
+<span class="text-[10px] mt-1">Experience</span>
+</a>
+<!-- Projects (Inactive) -->
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:text-primary transition-all active:scale-90 transition-transform" href="#">
+<span class="material-symbols-outlined" data-icon="biotech">biotech</span>
+<span class="text-[10px] mt-1">Projects</span>
+</a>
+<!-- Contact (Inactive) -->
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:text-primary transition-all active:scale-90 transition-transform" href="#">
+<span class="material-symbols-outlined" data-icon="alternate_email">alternate_email</span>
+<span class="text-[10px] mt-1">Contact</span>
+</a>
+</nav>
+<!-- Footer -->
+<footer class="bg-surface-dim text-tertiary font-label-mono text-label-mono font-label-caps text-label-caps text-on-surface w-full mt-auto border-t border-border-subtle flex flex-col items-center gap-4 py-8 px-margin-mobile text-center hidden md:flex">
+<div class="flex gap-6">
+<a class="text-on-surface-variant hover:text-data-node transition-colors opacity-80 hover:opacity-100" href="#">Technical Papers</a>
+<a class="text-on-surface-variant hover:text-data-node transition-colors opacity-80 hover:opacity-100" href="#">Privacy Protocol</a>
+<a class="text-on-surface-variant hover:text-data-node transition-colors opacity-80 hover:opacity-100" href="#">Network</a>
+</div>
+<p class="text-on-surface-variant text-xs opacity-60">© 2024 Emmanuel Adewumi • Research-driven Innovation</p>
+</footer>
+</body></html>

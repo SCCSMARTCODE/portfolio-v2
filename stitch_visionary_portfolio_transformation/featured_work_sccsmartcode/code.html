@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Projects - Emmanuel Adewumi</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&amp;family=Space+Mono:wght@400;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "on-primary": "#1000a9",
+                      "secondary-fixed": "#f0dbff",
+                      "primary-container": "#8083ff",
+                      "primary-fixed-dim": "#c0c1ff",
+                      "border-subtle": "rgba(255, 255, 255, 0.08)",
+                      "surface-dim": "#131315",
+                      "on-error": "#690005",
+                      "surface": "#131315",
+                      "data-node": "#22c55e",
+                      "on-primary-fixed": "#07006c",
+                      "tertiary": "#89ceff",
+                      "inverse-primary": "#494bd6",
+                      "on-error-container": "#ffdad6",
+                      "error": "#ffb4ab",
+                      "background": "#131315",
+                      "outline-variant": "#464554",
+                      "on-background": "#e5e1e4",
+                      "inverse-surface": "#e5e1e4",
+                      "on-tertiary-fixed-variant": "#004c6e",
+                      "secondary-fixed-dim": "#ddb7ff",
+                      "on-tertiary": "#00344d",
+                      "on-primary-fixed-variant": "#2f2ebe",
+                      "on-secondary": "#490080",
+                      "primary": "#c0c1ff",
+                      "surface-container-lowest": "#0e0e10",
+                      "surface-glass": "rgba(24, 24, 27, 0.6)",
+                      "on-primary-container": "#0d0096",
+                      "secondary": "#ddb7ff",
+                      "surface-charcoal": "#18181b",
+                      "on-surface-variant": "#c7c4d7",
+                      "inverse-on-surface": "#313032",
+                      "on-tertiary-fixed": "#001e2f",
+                      "outline": "#908fa0",
+                      "surface-tint": "#c0c1ff",
+                      "vibrant-purple": "#a855f7",
+                      "on-secondary-fixed-variant": "#6900b3",
+                      "on-surface": "#e5e1e4",
+                      "surface-container-high": "#2a2a2c",
+                      "on-tertiary-container": "#002d43",
+                      "tertiary-container": "#009ada",
+                      "surface-bright": "#39393b",
+                      "tertiary-fixed-dim": "#89ceff",
+                      "electric-indigo": "#6366f1",
+                      "surface-container-highest": "#353437",
+                      "on-secondary-fixed": "#2c0051",
+                      "error-container": "#93000a",
+                      "tertiary-fixed": "#c9e6ff",
+                      "surface-container-low": "#1c1b1d",
+                      "secondary-container": "#6f00be",
+                      "primary-fixed": "#e1e0ff",
+                      "surface-container": "#201f22",
+                      "surface-variant": "#353437",
+                      "on-secondary-container": "#d6a9ff"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.125rem",
+                      "lg": "0.25rem",
+                      "xl": "0.5rem",
+                      "full": "0.75rem"
+              },
+              "spacing": {
+                      "gutter": "24px",
+                      "margin-mobile": "20px",
+                      "unit": "8px",
+                      "margin-desktop": "80px",
+                      "container-max": "1200px"
+              },
+              "fontFamily": {
+                      "display-lg": [
+                              "Plus Jakarta Sans"
+                      ],
+                      "label-caps": [
+                              "Space Mono"
+                      ],
+                      "body-md": [
+                              "Plus Jakarta Sans"
+                      ],
+                      "display-xl": [
+                              "Plus Jakarta Sans"
+                      ],
+                      "headline-lg": [
+                              "Plus Jakarta Sans"
+                      ],
+                      "body-lg": [
+                              "Plus Jakarta Sans"
+                      ],
+                      "headline-lg-mobile": [
+                              "Plus Jakarta Sans"
+                      ],
+                      "label-mono": [
+                              "Space Mono"
+                      ]
+              },
+              "fontSize": {
+                      "display-lg": [
+                              "48px",
+                              {
+                                      "lineHeight": "56px",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "label-caps": [
+                              "12px",
+                              {
+                                      "lineHeight": "16px",
+                                      "letterSpacing": "0.1em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "body-md": [
+                              "16px",
+                              {
+                                      "lineHeight": "24px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "display-xl": [
+                              "72px",
+                              {
+                                      "lineHeight": "80px",
+                                      "letterSpacing": "-0.04em",
+                                      "fontWeight": "800"
+                              }
+                      ],
+                      "headline-lg": [
+                              "32px",
+                              {
+                                      "lineHeight": "40px",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "body-lg": [
+                              "18px",
+                              {
+                                      "lineHeight": "28px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "headline-lg-mobile": [
+                              "28px",
+                              {
+                                      "lineHeight": "36px",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "label-mono": [
+                              "14px",
+                              {
+                                      "lineHeight": "20px",
+                                      "letterSpacing": "0.05em",
+                                      "fontWeight": "400"
+                              }
+                      ]
+              }
+      },
+          },
+        }
+    </script>
+<style>
+        body {
+            background-color: #09090b; /* True Black as base */
+            color: #e5e1e4;
+        }
+        .bg-grid-pattern {
+            background-image: 
+                linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+            background-size: 24px 24px;
+        }
+        
+        /* Subtle glow for high-priority elements */
+        .glow-effect {
+            box-shadow: 0 0 20px rgba(99, 102, 241, 0.1); /* Indigo glow */
+        }
+        
+        .glow-effect:hover {
+            box-shadow: 0 0 30px rgba(99, 102, 241, 0.2);
+        }
+
+        /* Glassmorphism utility */
+        .glass-panel {
+            background: rgba(24, 24, 27, 0.6);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+        
+        /* Hide scrollbar for filter chips */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;  /* IE and Edge */
+            scrollbar-width: none;  /* Firefox */
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="antialiased min-h-screen flex flex-col relative bg-grid-pattern pb-24 md:pb-0 pt-16">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-surface-glass backdrop-blur-xl border-b border-border-subtle flex justify-between items-center px-margin-mobile h-16">
+<div class="flex items-center">
+<span class="material-symbols-outlined text-primary dark:text-primary mr-4" data-icon="menu">menu</span>
+<span class="font-label-caps text-label-caps tracking-widest text-primary dark:text-primary font-extrabold">SCCSMARTCODE</span>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="flex-grow flex flex-col px-margin-mobile md:px-margin-desktop py-8 max-w-container-max mx-auto w-full gap-8 relative z-10">
+<!-- Header Section -->
+<section class="flex flex-col gap-2">
+<div class="flex items-baseline gap-4">
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile md:font-headline-lg md:text-headline-lg text-on-surface">Featured Innovations</h1>
+<span class="font-label-mono text-label-mono text-electric-indigo bg-electric-indigo/10 px-2 py-1 rounded-DEFAULT border border-electric-indigo/20">8+ Projects</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-2xl">A curated selection of technical research, systems engineering, and machine learning implementations.</p>
+</section>
+<!-- Filter Chips (Glassmorphism) -->
+<section class="overflow-x-auto no-scrollbar py-2 -mx-margin-mobile px-margin-mobile md:mx-0 md:px-0">
+<div class="flex gap-3 w-max">
+<button class="font-label-mono text-label-mono px-4 py-2 rounded-full glass-panel border border-electric-indigo text-electric-indigo bg-electric-indigo/10 transition-all">All</button>
+<button class="font-label-mono text-label-mono px-4 py-2 rounded-full glass-panel border border-border-subtle text-on-surface-variant hover:border-electric-indigo hover:text-primary transition-all">AI &amp; ML</button>
+<button class="font-label-mono text-label-mono px-4 py-2 rounded-full glass-panel border border-border-subtle text-on-surface-variant hover:border-electric-indigo hover:text-primary transition-all">Systems</button>
+<button class="font-label-mono text-label-mono px-4 py-2 rounded-full glass-panel border border-border-subtle text-on-surface-variant hover:border-electric-indigo hover:text-primary transition-all">Web Dev</button>
+</div>
+</section>
+<!-- Project Grid -->
+<section class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
+<!-- Project Card 1: SafeX Labs -->
+<article class="flex flex-col bg-surface-charcoal border border-border-subtle rounded-lg overflow-hidden group hover:border-electric-indigo/50 transition-colors glow-effect relative h-[400px]">
+<div class="absolute inset-0 bg-gradient-to-t from-[#09090b] via-transparent to-transparent z-10"></div>
+<img alt="SafeX Labs Edge AI Concept" class="absolute inset-0 w-full h-full object-cover filter grayscale group-hover:grayscale-0 transition-all duration-500 opacity-60 group-hover:opacity-80" data-alt="A highly detailed visualization of a neural network data flow overlaying a minimal urban security camera feed. The aesthetic is dark mode, futuristic, and precise, utilizing deep black backgrounds (#09090b) with striking electric indigo and bright green data node visual accents. The mood is highly technical and secure, emphasizing Edge AI processing." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAI2wCdQ9KpJ5OWW04fl2_3elF0IW3cBH_aQui4PN0C6ML19sO5ZM4WLys7saaNCkUdtEu7Ccx-eUSaF7I_pnsWSZv9_qg8bmSAWjYWOsKdlGpXJ1fB63ungkm2mxJcscMenwI11yfDFH1SwBluw__oYzZO9h6KrJW_aF_p_roYBfoEJbwhlJ9K0Nq3Ee4z953y5t1SVc7IwXie8EtsvhGmnPC7qoM3_YJzBVpd14LxoLt4a66MPjuUtmz9v_qoSa7zDn0d8iqK4SE"/>
+<div class="relative z-20 flex flex-col h-full p-6 justify-between">
+<div class="flex justify-between items-start">
+<span class="font-label-caps text-label-caps px-3 py-1 rounded-full border border-vibrant-purple/50 bg-[#18181b]/80 backdrop-blur-sm text-vibrant-purple">Edge AI</span>
+<button aria-label="View Project" class="text-on-surface-variant hover:text-electric-indigo transition-colors">
+<span class="material-symbols-outlined" data-icon="arrow_outward">arrow_outward</span>
+</button>
+</div>
+<div class="flex flex-col gap-2">
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface group-hover:text-electric-indigo transition-colors">SafeX Labs</h2>
+<p class="font-body-md text-body-md text-on-surface-variant line-clamp-2">Privacy-aware edge surveillance using Multimodal LLMs. Implementing localized inference for real-time anomaly detection without cloud dependency.</p>
+<div class="flex gap-2 mt-2">
+<span class="font-label-mono text-label-mono text-[12px] px-2 py-1 border border-border-subtle rounded-DEFAULT bg-surface-charcoal text-on-surface-variant group-hover:border-electric-indigo/50">PyTorch</span>
+<span class="font-label-mono text-label-mono text-[12px] px-2 py-1 border border-border-subtle rounded-DEFAULT bg-surface-charcoal text-on-surface-variant group-hover:border-electric-indigo/50">C++</span>
+</div>
+</div>
+</div>
+</article>
+<!-- Project Card 2: Inkriv -->
+<article class="flex flex-col bg-surface-charcoal border border-border-subtle rounded-lg overflow-hidden group hover:border-vibrant-purple/50 transition-colors p-6 justify-between h-[400px] relative">
+<!-- Abstract geometric background pattern -->
+<div class="absolute inset-0 opacity-10 group-hover:opacity-20 transition-opacity duration-500 pointer-events-none" style="background-image: radial-gradient(circle at 50% 50%, #a855f7 1px, transparent 1px); background-size: 20px 20px;"></div>
+<div class="flex justify-between items-start relative z-10">
+<span class="font-label-caps text-label-caps px-3 py-1 rounded-full border border-electric-indigo/50 bg-[#18181b] text-electric-indigo">LLM Orchestration</span>
+<button aria-label="View Project" class="text-on-surface-variant hover:text-vibrant-purple transition-colors">
+<span class="material-symbols-outlined" data-icon="code_blocks">code_blocks</span>
+</button>
+</div>
+<div class="flex flex-col gap-2 relative z-10">
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface group-hover:text-vibrant-purple transition-colors">Inkriv</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">AI Writing Assistant with adaptive ghostwriting. Utilizing LangChain and custom prompt orchestration to mimic user-specific writing styles securely.</p>
+<div class="flex gap-2 mt-2 flex-wrap">
+<span class="font-label-mono text-label-mono text-[12px] px-2 py-1 border border-border-subtle rounded-DEFAULT bg-surface-charcoal text-on-surface-variant group-hover:border-vibrant-purple/50">Python</span>
+<span class="font-label-mono text-label-mono text-[12px] px-2 py-1 border border-border-subtle rounded-DEFAULT bg-surface-charcoal text-on-surface-variant group-hover:border-vibrant-purple/50">LangChain</span>
+<span class="font-label-mono text-label-mono text-[12px] px-2 py-1 border border-border-subtle rounded-DEFAULT bg-surface-charcoal text-on-surface-variant group-hover:border-vibrant-purple/50">React</span>
+</div>
+</div>
+</article>
+<!-- Project Card 3: CChatAPP -->
+<article class="flex flex-col bg-surface-charcoal border border-border-subtle rounded-lg overflow-hidden group hover:border-data-node/50 transition-colors p-6 justify-between h-[400px] relative">
+<!-- Terminal-like subtle lines -->
+<div class="absolute inset-0 opacity-5 group-hover:opacity-10 transition-opacity duration-500 pointer-events-none" style="background-image: repeating-linear-gradient(0deg, transparent, transparent 2px, #22c55e 2px, #22c55e 4px);"></div>
+<div class="flex justify-between items-start relative z-10">
+<span class="font-label-caps text-label-caps px-3 py-1 rounded-full border border-data-node/50 bg-[#18181b] text-data-node">C / Systems</span>
+<button aria-label="View Project" class="text-on-surface-variant hover:text-data-node transition-colors">
+<span class="material-symbols-outlined" data-icon="terminal">terminal</span>
+</button>
+</div>
+<div class="flex flex-col gap-2 relative z-10">
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface group-hover:text-data-node transition-colors">CChatAPP</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Low-level socket programming and GTK networking. A high-performance, multithreaded chat server and client demonstrating deep OS-level integration.</p>
+<div class="flex gap-2 mt-2">
+<span class="font-label-mono text-label-mono text-[12px] px-2 py-1 border border-border-subtle rounded-DEFAULT bg-surface-charcoal text-on-surface-variant group-hover:border-data-node/50">C</span>
+<span class="font-label-mono text-label-mono text-[12px] px-2 py-1 border border-border-subtle rounded-DEFAULT bg-surface-charcoal text-on-surface-variant group-hover:border-data-node/50">POSIX Sockets</span>
+<span class="font-label-mono text-label-mono text-[12px] px-2 py-1 border border-border-subtle rounded-DEFAULT bg-surface-charcoal text-on-surface-variant group-hover:border-data-node/50">GTK</span>
+</div>
+</div>
+</article>
+<!-- Project Card 4: Attention from Scratch -->
+<article class="flex flex-col bg-surface-charcoal border border-border-subtle rounded-lg overflow-hidden group hover:border-tertiary/50 transition-colors p-6 justify-between h-[400px] relative">
+<!-- Mathematical graph subtle overlay -->
+<div class="absolute inset-0 opacity-10 group-hover:opacity-20 transition-opacity duration-500 pointer-events-none" style="background-image: linear-gradient(#89ceff 1px, transparent 1px), linear-gradient(90deg, #89ceff 1px, transparent 1px); background-size: 40px 40px; background-position: center;"></div>
+<div class="flex justify-between items-start relative z-10">
+<span class="font-label-caps text-label-caps px-3 py-1 rounded-full border border-tertiary/50 bg-[#18181b] text-tertiary">Research</span>
+<button aria-label="View Project" class="text-on-surface-variant hover:text-tertiary transition-colors">
+<span class="material-symbols-outlined" data-icon="science">science</span>
+</button>
+</div>
+<div class="flex flex-col gap-2 relative z-10">
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface group-hover:text-tertiary transition-colors">Attention from Scratch</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">PyTorch implementation of Transformer architecture. A deep dive into the mathematical mechanics of multi-head self-attention mechanisms without high-level wrappers.</p>
+<div class="flex gap-2 mt-2">
+<span class="font-label-mono text-label-mono text-[12px] px-2 py-1 border border-border-subtle rounded-DEFAULT bg-surface-charcoal text-on-surface-variant group-hover:border-tertiary/50">PyTorch</span>
+<span class="font-label-mono text-label-mono text-[12px] px-2 py-1 border border-border-subtle rounded-DEFAULT bg-surface-charcoal text-on-surface-variant group-hover:border-tertiary/50">Mathematics</span>
+</div>
+</div>
+</article>
+</section>
+<!-- Bottom spacing for mobile nav -->
+<div class="h-8 md:hidden"></div>
+</main>
+<!-- BottomNavBar (Mobile Only) -->
+<nav class="md:hidden fixed bottom-6 left-1/2 -translate-x-1/2 w-[90%] rounded-full z-50 bg-surface-glass backdrop-blur-md border border-border-subtle shadow-[0_0_20px_rgba(99,102,241,0.15)] flex justify-around items-center py-3">
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:text-primary transition-all" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="home">home</span>
+<span class="font-label-caps text-label-caps text-[10px]">Home</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:text-primary transition-all" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="timeline">timeline</span>
+<span class="font-label-caps text-label-caps text-[10px]">Experience</span>
+</a>
+<a class="flex flex-col items-center justify-center text-primary bg-primary-container/20 rounded-full px-4 py-1" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="biotech">biotech</span>
+<span class="font-label-caps text-label-caps text-[10px]">Projects</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:text-primary transition-all" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="alternate_email">alternate_email</span>
+<span class="font-label-caps text-label-caps text-[10px]">Contact</span>
+</a>
+</nav>
+<!-- Footer -->
+<footer class="w-full mt-auto bg-surface-dim border-t border-border-subtle flex flex-col items-center gap-4 py-8 px-margin-mobile text-center z-10">
+<div class="flex gap-6 font-label-mono text-label-mono text-tertiary">
+<a class="opacity-80 hover:opacity-100 hover:text-data-node transition-colors" href="#">Technical Papers</a>
+<a class="opacity-80 hover:opacity-100 hover:text-data-node transition-colors" href="#">Privacy Protocol</a>
+<a class="opacity-80 hover:opacity-100 hover:text-data-node transition-colors" href="#">Network</a>
+</div>
+<p class="font-label-caps text-label-caps text-on-surface text-on-surface-variant">© 2024 Emmanuel Adewumi • Research-driven Innovation</p>
+</footer>
+</body></html>

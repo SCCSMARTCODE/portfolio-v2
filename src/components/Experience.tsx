@@ -1,102 +1,128 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Briefcase, Calendar } from "lucide-react";
+import { GitBranch, Milestone } from "lucide-react";
 
 const experiences = [
   {
-    role: "Full Stack Engineer & Systems Lead (Freelance)",
+    role: "Systems Lead",
     company: "Zeviel Law Firm",
     period: "2024 - Present",
-    description: "Led the rebuild and restructuring of Zeviel Law Firm's production platform, optimizing a complex frontend infrastructure into a refined, high-performance, single-stack Next.js environment. Taking ownership of the end-to-end system architecture, implementing backend stability paradigms, and optimizing database workflows for production reliability.",
-    tags: ["Next.js", "System Architecture", "Frontend Optimization", "Database Management"]
+    bullets: [
+      "Rebuilt the production platform into a high-performance Next.js architecture.",
+      "Designed backend stability patterns and improved secure document workflows.",
+    ],
+    tags: ["Next.js", "System Arch", "Backend Ops"],
   },
   {
     role: "Founding Product & AI Engineer",
     company: "Inkriv",
     period: "2024 - Present",
-    description: "Spearheading the core development of Inkriv, bridging Advanced Agentic Orchestration for AI Personalization. Directing the architectural implementation of Adaptive Learning pipelines, ghostwriting inference, and memory injection across the model stack. Engineered zero-downtime robust Backend environments connecting multi-modal features.",
-    tags: ["AI Personalization", "Agentic Orchestration", "Backend Engineering", "DevOps", "Adaptive Learning"]
+    bullets: [
+      "Served as an Inkriv engineer building adaptive ghostwriting, retrieval, orchestration, and AI memory systems.",
+      "Built backend environments connecting multi-modal features, AI personalization flows, and data ingestion.",
+    ],
+    tags: ["Inkriv", "Agentic AI", "LLM Orchestration", "Python"],
   },
   {
-    role: "Machine Learning & Deep Learning Trainee",
+    role: "ML Trainee",
     company: "Prometheus AI Program",
-    period: "2024 - 2025",
-    description: "Completed an intensive program focused on machine learning and deep learning. Gained hands-on experience with model development, training, and deployment using PyTorch.",
-    tags: ["PyTorch", "NLP", "Transformers", "Computer Vision", "LLM"]
+    period: "Past Node",
+    bullets: [
+      "Explored deep learning fundamentals through custom neural network architectures.",
+      "Analyzed transformer mechanics and language model dynamics.",
+    ],
+    tags: ["PyTorch", "Transformers", "ML Theory"],
   },
   {
-    role: "Software Engineering Trainee",
+    role: "Software Engineering",
     company: "ALX Africa",
-    period: "2023 - 2024",
-    description: "Completed a rigorous 12-month course covering foundational and advanced topics, including data structures, algorithms, system design, database management, and containerization.",
-    tags: ["Python", "C", "SQL", "PostgreSQL", "Docker"]
-  }
+    period: "Genesis Node",
+    bullets: [
+      "Mastered algorithms, low-level programming semantics, and system design basics.",
+      "Built foundations across C, Python, databases, and containerized workflows.",
+    ],
+    tags: ["Algorithms", "Systems C", "Data Structures"],
+  },
 ];
 
 export default function Experience() {
   return (
-    <section id="experience" className="py-20 bg-bg-secondary/30">
-      <div className="container mx-auto px-6">
+    <section
+      id="experience"
+      className="relative overflow-hidden border-y border-border-secondary bg-bg-secondary/18 py-20 md:py-28"
+    >
+      <div className="mx-auto max-w-6xl px-5 md:px-8">
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 18 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="text-center mb-16"
+          className="mb-14 max-w-3xl"
         >
-          <h2 className="text-4xl font-bold font-heading mb-4">
-            Professional Experience
+          <span className="section-kicker">
+            <GitBranch size={14} />
+            Trajectory
+          </span>
+          <h2 className="mt-6 font-heading text-4xl font-black leading-tight md:text-6xl">
+            Experience Vector
           </h2>
-          <div className="w-20 h-1 bg-gradient-to-r from-primary to-secondary mx-auto rounded-full" />
+          <p className="mt-5 text-lg leading-8 text-text-secondary">
+            A chronological mapping of professional milestones, algorithmic
+            deployment, and systemic optimization.
+          </p>
         </motion.div>
 
-        <div className="max-w-4xl mx-auto">
-          <div className="relative border-l-2 border-border-primary ml-4 md:ml-0 space-y-12">
-            {experiences.map((exp, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="relative pl-8 md:pl-12"
-              >
-                {/* Timeline Dot */}
-                <div className="absolute left-[-9px] top-0 w-4 h-4 rounded-full bg-primary border-4 border-bg-primary shadow-[0_0_0_4px_rgba(var(--primary),0.2)]" />
+        <div className="relative ml-3 border-l border-primary/45 pl-7 md:ml-10 md:pl-12">
+          {experiences.map((experience, index) => (
+            <motion.article
+              key={`${experience.company}-${experience.role}`}
+              initial={{ opacity: 0, x: -18 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.45, delay: index * 0.08 }}
+              className="relative pb-7 last:pb-0"
+            >
+              <div className="absolute -left-[2.15rem] top-5 flex h-5 w-5 items-center justify-center rounded-full border border-primary bg-bg-primary md:-left-[3.35rem]">
+                <span className="h-2 w-2 rounded-full bg-primary" />
+              </div>
 
-                <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4 mb-2">
+              <div className="panel rounded-lg p-6 md:p-7">
+                <div className="mb-5 flex flex-col gap-3 md:flex-row md:items-start md:justify-between">
                   <div>
-                    <h3 className="text-2xl font-bold text-text-primary">
-                      {exp.role}
+                    <p className="mono-label mb-2 text-xs text-primary-light">
+                      {experience.period}
+                    </p>
+                    <h3 className="font-heading text-2xl font-black md:text-3xl">
+                      {experience.role}
                     </h3>
-                    <h4 className="text-xl text-primary font-medium">
-                      {exp.company}
-                    </h4>
+                    <p className="mt-1 text-text-secondary">{experience.company}</p>
                   </div>
-                  <div className="flex items-center gap-2 text-text-tertiary bg-bg-secondary px-3 py-1 rounded-full text-sm w-fit">
-                    <Calendar size={14} />
-                    <span>{exp.period}</span>
-                  </div>
+                  <Milestone className="hidden text-primary md:block" size={24} />
                 </div>
 
-                <p className="text-text-secondary mb-4 leading-relaxed">
-                  {exp.description}
-                </p>
+                <ul className="space-y-3 text-sm leading-6 text-text-secondary md:text-base">
+                  {experience.bullets.map((bullet) => (
+                    <li key={bullet} className="flex gap-3">
+                      <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-primary-light" />
+                      {bullet}
+                    </li>
+                  ))}
+                </ul>
 
-                <div className="flex flex-wrap gap-2">
-                  {exp.tags.map((tag, i) => (
+                <div className="mt-6 flex flex-wrap gap-2">
+                  {experience.tags.map((tag) => (
                     <span
-                      key={i}
-                      className="text-xs px-2 py-1 rounded bg-bg-glass border border-border-primary text-text-tertiary"
+                      key={tag}
+                      className="rounded border border-border-primary bg-bg-primary/55 px-3 py-1 font-mono text-[0.68rem] font-bold text-text-secondary"
                     >
                       {tag}
                     </span>
                   ))}
                 </div>
-              </motion.div>
-            ))}
-          </div>
+              </div>
+            </motion.article>
+          ))}
         </div>
       </div>
     </section>

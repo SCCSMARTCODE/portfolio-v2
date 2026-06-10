@@ -41,18 +41,18 @@ export const metadata: Metadata = {
     canonical: "/",
   },
   openGraph: {
+    title: siteConfig.name,
+    description: siteConfig.description,
     type: "website",
     locale: "en_US",
     url: siteConfig.url,
     siteName: siteConfig.name,
-    title: siteConfig.name,
-    description: siteConfig.description,
     images: [
       {
         url: "/opengraph-image",
         width: 1200,
         height: 630,
-        alt: `${siteConfig.shortName} portfolio preview`,
+        alt: "Emmanuel Adewumi, SCCSMARTCODE, Inkriv Founding AI Engineer portfolio preview",
       },
     ],
   },
@@ -86,7 +86,7 @@ export default function RootLayout({
         className={`${inter.variable} ${plusJakarta.variable} ${jetbrainsMono.variable} antialiased bg-bg-primary text-text-primary flex flex-col min-h-screen`}
       >
         <Navbar />
-        <main className="flex-grow pt-20">
+        <main className="flex-grow">
           {children}
         </main>
         <Footer />

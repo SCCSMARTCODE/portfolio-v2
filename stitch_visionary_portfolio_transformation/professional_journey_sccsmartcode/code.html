@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Experience - Emmanuel Adewumi</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&amp;family=Space+Mono:wght@400;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        /* Mathematical grid background pattern */
+        .bg-grid-pattern {
+            background-image: 
+                linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+            background-size: 24px 24px;
+        }
+        /* Custom scrollbar for deep tech feel */
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #09090b; 
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #18181b; 
+            border: 1px solid rgba(255,255,255,0.08);
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #464554; 
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "on-primary": "#1000a9",
+                        "secondary-fixed": "#f0dbff",
+                        "primary-container": "#8083ff",
+                        "primary-fixed-dim": "#c0c1ff",
+                        "border-subtle": "rgba(255, 255, 255, 0.08)",
+                        "surface-dim": "#131315",
+                        "on-error": "#690005",
+                        "surface": "#131315",
+                        "data-node": "#22c55e",
+                        "on-primary-fixed": "#07006c",
+                        "tertiary": "#89ceff",
+                        "inverse-primary": "#494bd6",
+                        "on-error-container": "#ffdad6",
+                        "error": "#ffb4ab",
+                        "background": "#09090b", /* True Black Base */
+                        "outline-variant": "#464554",
+                        "on-background": "#e5e1e4",
+                        "inverse-surface": "#e5e1e4",
+                        "on-tertiary-fixed-variant": "#004c6e",
+                        "secondary-fixed-dim": "#ddb7ff",
+                        "on-tertiary": "#00344d",
+                        "on-primary-fixed-variant": "#2f2ebe",
+                        "on-secondary": "#490080",
+                        "primary": "#c0c1ff",
+                        "surface-container-lowest": "#0e0e10",
+                        "surface-glass": "rgba(24, 24, 27, 0.6)",
+                        "on-primary-container": "#0d0096",
+                        "secondary": "#ddb7ff",
+                        "surface-charcoal": "#18181b",
+                        "on-surface-variant": "#c7c4d7",
+                        "inverse-on-surface": "#313032",
+                        "on-tertiary-fixed": "#001e2f",
+                        "outline": "#908fa0",
+                        "surface-tint": "#c0c1ff",
+                        "vibrant-purple": "#a855f7",
+                        "on-secondary-fixed-variant": "#6900b3",
+                        "on-surface": "#e5e1e4",
+                        "surface-container-high": "#2a2a2c",
+                        "on-tertiary-container": "#002d43",
+                        "tertiary-container": "#009ada",
+                        "surface-bright": "#39393b",
+                        "tertiary-fixed-dim": "#89ceff",
+                        "electric-indigo": "#6366f1",
+                        "surface-container-highest": "#353437",
+                        "on-secondary-fixed": "#2c0051",
+                        "error-container": "#93000a",
+                        "tertiary-fixed": "#c9e6ff",
+                        "surface-container-low": "#1c1b1d",
+                        "secondary-container": "#6f00be",
+                        "primary-fixed": "#e1e0ff",
+                        "surface-container": "#201f22",
+                        "surface-variant": "#353437",
+                        "on-secondary-container": "#d6a9ff"
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    spacing: {
+                        "gutter": "24px",
+                        "margin-mobile": "20px",
+                        "unit": "8px",
+                        "margin-desktop": "80px",
+                        "container-max": "1200px"
+                    },
+                    fontFamily: {
+                        "display-lg": ["Plus Jakarta Sans"],
+                        "label-caps": ["Space Mono"],
+                        "body-md": ["Plus Jakarta Sans"],
+                        "display-xl": ["Plus Jakarta Sans"],
+                        "headline-lg": ["Plus Jakarta Sans"],
+                        "body-lg": ["Plus Jakarta Sans"],
+                        "headline-lg-mobile": ["Plus Jakarta Sans"],
+                        "label-mono": ["Space Mono"]
+                    },
+                    fontSize: {
+                        "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "label-caps": ["12px", { "lineHeight": "16px", "letterSpacing": "0.1em", "fontWeight": "700" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "display-xl": ["72px", { "lineHeight": "80px", "letterSpacing": "-0.04em", "fontWeight": "800" }],
+                        "headline-lg": ["32px", { "lineHeight": "40px", "fontWeight": "600" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "headline-lg-mobile": ["28px", { "lineHeight": "36px", "fontWeight": "600" }],
+                        "label-mono": ["14px", { "lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background antialiased relative min-h-screen flex flex-col bg-grid-pattern overflow-x-hidden">
+<!-- TopAppBar -->
+<header class="bg-surface-glass fixed top-0 w-full z-50 backdrop-blur-xl border-b border-border-subtle flex justify-between items-center px-margin-mobile h-16 w-full">
+<button class="text-on-surface-variant hover:text-vibrant-purple transition-colors scale-95 duration-200">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">menu</span>
+</button>
+<div class="font-label-caps text-label-caps tracking-widest text-primary dark:text-primary text-center flex-grow">
+            SCCSMARTCODE
+        </div>
+<div class="w-6"></div> <!-- Spacer for balance -->
+</header>
+<!-- Main Content -->
+<main class="flex-grow pt-24 pb-32 px-margin-mobile max-w-container-max mx-auto w-full flex flex-col relative z-10">
+<!-- Header Section -->
+<section class="mb-16 mt-8">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-vibrant-purple/30 bg-vibrant-purple/10 mb-6">
+<div class="w-1.5 h-1.5 rounded-full bg-vibrant-purple animate-pulse"></div>
+<span class="font-label-caps text-label-caps text-vibrant-purple">TRAJECTORY</span>
+</div>
+<h1 class="font-display-lg text-display-lg text-on-surface mb-4">Experience Vector</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">
+                A chronological mapping of professional milestones, algorithm deployment, and systemic optimization.
+            </p>
+</section>
+<!-- Vertical Timeline -->
+<section class="relative">
+<!-- Glowing Line -->
+<div class="absolute left-[15px] top-4 bottom-0 w-[2px] bg-gradient-to-b from-electric-indigo via-vibrant-purple to-transparent opacity-80 z-0"></div>
+<div class="flex flex-col gap-12">
+<!-- Role 1: Zeviel Law Firm -->
+<div class="relative pl-12">
+<!-- Timeline Node -->
+<div class="absolute left-0 top-1 w-8 h-8 rounded-full bg-surface-charcoal border-2 border-electric-indigo z-10 flex items-center justify-center shadow-[0_0_15px_rgba(99,102,241,0.4)]">
+<div class="w-2 h-2 rounded-full bg-electric-indigo"></div>
+</div>
+<!-- Content Card -->
+<div class="bg-surface-charcoal border border-border-subtle rounded-xl p-6 relative overflow-hidden group">
+<!-- Subtle Glow on Hover -->
+<div class="absolute inset-0 bg-gradient-to-br from-electric-indigo/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
+<div class="flex flex-col gap-1 mb-4 relative z-10">
+<span class="font-label-mono text-label-mono text-electric-indigo">2024 — Present</span>
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface">Systems Lead</h2>
+<h3 class="font-body-md text-body-md text-on-surface-variant">Zeviel Law Firm</h3>
+</div>
+<div class="font-body-md text-body-md text-on-surface-variant mb-6 space-y-3 relative z-10">
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-tertiary text-sm mt-1">subdirectory_arrow_right</span>
+<p>Engineered comprehensive Next.js optimization strategies, reducing load latency across internal legal portals.</p>
+</div>
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-tertiary text-sm mt-1">subdirectory_arrow_right</span>
+<p>Architected backend stability protocols, ensuring highly available infrastructure for secure document parsing and retrieval.</p>
+</div>
+</div>
+<!-- Technical Arsenal Chips -->
+<div class="flex flex-wrap gap-2 relative z-10">
+<span class="font-label-mono text-label-caps px-3 py-1 rounded bg-surface-dim border border-border-subtle text-on-surface hover:border-primary transition-colors cursor-default">Next.js</span>
+<span class="font-label-mono text-label-caps px-3 py-1 rounded bg-surface-dim border border-border-subtle text-on-surface hover:border-primary transition-colors cursor-default">System Arch</span>
+<span class="font-label-mono text-label-caps px-3 py-1 rounded bg-surface-dim border border-border-subtle text-on-surface hover:border-primary transition-colors cursor-default">Backend Ops</span>
+</div>
+</div>
+</div>
+<!-- Role 2: Inkriv -->
+<div class="relative pl-12">
+<div class="absolute left-0 top-1 w-8 h-8 rounded-full bg-surface-charcoal border-2 border-vibrant-purple z-10 flex items-center justify-center shadow-[0_0_15px_rgba(168,85,247,0.3)]">
+<div class="w-2 h-2 rounded-full bg-vibrant-purple"></div>
+</div>
+<div class="bg-surface-charcoal border border-border-subtle rounded-xl p-6 relative overflow-hidden group">
+<div class="absolute inset-0 bg-gradient-to-br from-vibrant-purple/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
+<div class="flex flex-col gap-1 mb-4 relative z-10">
+<span class="font-label-mono text-label-mono text-vibrant-purple">2024 — Present</span>
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface">Founding AI Engineer</h2>
+<h3 class="font-body-md text-body-md text-on-surface-variant">Inkriv</h3>
+</div>
+<div class="font-body-md text-body-md text-on-surface-variant mb-6 space-y-3 relative z-10">
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-tertiary text-sm mt-1">subdirectory_arrow_right</span>
+<p>Spearheading Agentic Orchestration frameworks for autonomous task execution and dynamic reasoning flows.</p>
+</div>
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-tertiary text-sm mt-1">subdirectory_arrow_right</span>
+<p>Developing Adaptive Learning models that refine operational accuracy based on continuous contextual data ingestion.</p>
+</div>
+</div>
+<div class="flex flex-wrap gap-2 relative z-10">
+<span class="font-label-mono text-label-caps px-3 py-1 rounded bg-surface-dim border border-border-subtle text-on-surface hover:border-primary transition-colors cursor-default">Agentic AI</span>
+<span class="font-label-mono text-label-caps px-3 py-1 rounded bg-surface-dim border border-border-subtle text-on-surface hover:border-primary transition-colors cursor-default">LLM Orchestration</span>
+<span class="font-label-mono text-label-caps px-3 py-1 rounded bg-surface-dim border border-border-subtle text-on-surface hover:border-primary transition-colors cursor-default">Python</span>
+</div>
+</div>
+</div>
+<!-- Role 3: Prometheus Program -->
+<div class="relative pl-12">
+<div class="absolute left-0 top-1 w-8 h-8 rounded-full bg-surface-charcoal border-2 border-outline-variant z-10 flex items-center justify-center">
+<div class="w-2 h-2 rounded-full bg-outline-variant"></div>
+</div>
+<div class="bg-surface-charcoal border border-border-subtle rounded-xl p-6 relative overflow-hidden group">
+<div class="flex flex-col gap-1 mb-4 relative z-10">
+<span class="font-label-mono text-label-mono text-on-surface-variant">Past Node</span>
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface">ML Trainee</h2>
+<h3 class="font-body-md text-body-md text-on-surface-variant">Prometheus Program</h3>
+</div>
+<div class="font-body-md text-body-md text-on-surface-variant mb-6 space-y-3 relative z-10">
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-tertiary text-sm mt-1">subdirectory_arrow_right</span>
+<p>Rigorous exploration of deep learning fundamentals utilizing PyTorch for custom neural network architectures.</p>
+</div>
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-tertiary text-sm mt-1">subdirectory_arrow_right</span>
+<p>Analyzed Transformer mechanisms and foundational Large Language Models to map attention dynamics.</p>
+</div>
+</div>
+<div class="flex flex-wrap gap-2 relative z-10">
+<span class="font-label-mono text-label-caps px-3 py-1 rounded bg-surface-dim border border-border-subtle text-on-surface hover:border-primary transition-colors cursor-default">PyTorch</span>
+<span class="font-label-mono text-label-caps px-3 py-1 rounded bg-surface-dim border border-border-subtle text-on-surface hover:border-primary transition-colors cursor-default">Transformers</span>
+<span class="font-label-mono text-label-caps px-3 py-1 rounded bg-surface-dim border border-border-subtle text-on-surface hover:border-primary transition-colors cursor-default">ML Theory</span>
+</div>
+</div>
+</div>
+<!-- Role 4: ALX Africa -->
+<div class="relative pl-12">
+<div class="absolute left-0 top-1 w-8 h-8 rounded-full bg-surface-charcoal border-2 border-outline-variant z-10 flex items-center justify-center">
+<div class="w-2 h-2 rounded-full bg-outline-variant"></div>
+</div>
+<div class="bg-surface-charcoal border border-border-subtle rounded-xl p-6 relative overflow-hidden group">
+<div class="flex flex-col gap-1 mb-4 relative z-10">
+<span class="font-label-mono text-label-mono text-on-surface-variant">Genesis Node</span>
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface">Software Engineering</h2>
+<h3 class="font-body-md text-body-md text-on-surface-variant">ALX Africa</h3>
+</div>
+<div class="font-body-md text-body-md text-on-surface-variant mb-6 space-y-3 relative z-10">
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-tertiary text-sm mt-1">subdirectory_arrow_right</span>
+<p>Mastered foundational algorithms, low-level programming semantics, and systematic problem-solving paradigms.</p>
+</div>
+</div>
+<div class="flex flex-wrap gap-2 relative z-10">
+<span class="font-label-mono text-label-caps px-3 py-1 rounded bg-surface-dim border border-border-subtle text-on-surface hover:border-primary transition-colors cursor-default">Algorithms</span>
+<span class="font-label-mono text-label-caps px-3 py-1 rounded bg-surface-dim border border-border-subtle text-on-surface hover:border-primary transition-colors cursor-default">Systems C</span>
+<span class="font-label-mono text-label-caps px-3 py-1 rounded bg-surface-dim border border-border-subtle text-on-surface hover:border-primary transition-colors cursor-default">Data Structures</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- BottomNavBar -->
+<nav class="bg-surface-glass fixed bottom-6 left-1/2 -translate-x-1/2 w-[90%] rounded-full z-50 backdrop-blur-md border border-border-subtle shadow-[0_0_20px_rgba(99,102,241,0.15)] flex justify-around items-center py-3">
+<!-- Home (Inactive) -->
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:text-primary transition-all active:scale-90 duration-200" href="#">
+<span class="material-symbols-outlined mb-1" style="font-variation-settings: 'FILL' 0;">home</span>
+<span class="font-label-mono text-[10px]">Home</span>
+</a>
+<!-- Experience (Active) -->
+<a class="flex flex-col items-center justify-center text-primary bg-primary-container/20 rounded-full px-4 py-1 active:scale-90 transition-transform duration-200" href="#">
+<span class="material-symbols-outlined mb-1" style="font-variation-settings: 'FILL' 1;">timeline</span>
+<span class="font-label-mono text-[10px] font-bold">Experience</span>
+</a>
+<!-- Projects (Inactive) -->
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:text-primary transition-all active:scale-90 duration-200" href="#">
+<span class="material-symbols-outlined mb-1" style="font-variation-settings: 'FILL' 0;">biotech</span>
+<span class="font-label-mono text-[10px]">Projects</span>
+</a>
+<!-- Contact (Inactive) -->
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:text-primary transition-all active:scale-90 duration-200" href="#">
+<span class="material-symbols-outlined mb-1" style="font-variation-settings: 'FILL' 0;">alternate_email</span>
+<span class="font-label-mono text-[10px]">Contact</span>
+</a>
+</nav>
+<!-- Footer -->
+<footer class="bg-surface-dim w-full mt-auto border-t border-border-subtle flex flex-col items-center gap-4 py-8 px-margin-mobile text-center z-10 pb-32">
+<div class="font-label-caps text-label-caps text-on-surface tracking-widest">
+            © 2024 Emmanuel Adewumi • Research-driven Innovation
+        </div>
+<div class="flex gap-6 mt-2">
+<a class="font-label-mono text-label-mono text-on-surface-variant hover:text-data-node transition-colors opacity-80 hover:opacity-100" href="#">Technical Papers</a>
+<a class="font-label-mono text-label-mono text-on-surface-variant hover:text-data-node transition-colors opacity-80 hover:opacity-100" href="#">Privacy Protocol</a>
+<a class="font-label-mono text-label-mono text-on-surface-variant hover:text-data-node transition-colors opacity-80 hover:opacity-100" href="#">Network</a>
+</div>
+</footer>
+</body></html>

@@ -7,7 +7,7 @@ const experiences = [
   {
     role: "Systems Lead",
     company: "Zeviel Law Firm",
-    period: "2024 - Present",
+    period: "Mar 2026 - Present",
     bullets: [
       "Rebuilt the production platform into a high-performance Next.js architecture.",
       "Designed backend stability patterns and improved secure document workflows.",
@@ -17,7 +17,7 @@ const experiences = [
   {
     role: "Founding Product & AI Engineer",
     company: "Inkriv",
-    period: "2024 - Present",
+    period: "Mar 2025 - Present",
     bullets: [
       "Served as an Inkriv engineer building adaptive ghostwriting, retrieval, orchestration, and AI memory systems.",
       "Built backend environments connecting multi-modal features, AI personalization flows, and data ingestion.",
@@ -27,7 +27,7 @@ const experiences = [
   {
     role: "ML Trainee",
     company: "Prometheus AI Program",
-    period: "Past Node",
+    period: "Jan 2024 - Feb 2025",
     bullets: [
       "Explored deep learning fundamentals through custom neural network architectures.",
       "Analyzed transformer mechanics and language model dynamics.",
@@ -36,8 +36,8 @@ const experiences = [
   },
   {
     role: "Software Engineering",
-    company: "ALX Africa",
-    period: "Genesis Node",
+    company: "Holberton School",
+    period: "Jun 2023 - Jul 2024",
     bullets: [
       "Mastered algorithms, low-level programming semantics, and system design basics.",
       "Built foundations across C, Python, databases, and containerized workflows.",

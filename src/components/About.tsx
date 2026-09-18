@@ -80,11 +80,11 @@ export default function About() {
                 className="panel rounded-lg p-6"
               >
                 <div className="flex gap-5">
-                  <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-md border border-border-primary bg-bg-primary/60 text-primary">
+                  <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-md border border-border-primary bg-bg-tertiary/70 text-primary">
                     <item.icon size={22} />
                   </div>
                   <div>
-                    <h3 className="text-xl font-black">{item.title}</h3>
+                    <h3 className="text-xl font-black text-text-primary">{item.title}</h3>
                     <p className="mt-2 leading-7 text-text-secondary">
                       {item.description}
                     </p>
@@ -103,7 +103,7 @@ export default function About() {
           className="mt-16 border-t border-border-primary pt-9"
         >
           <div className="mb-7 flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
-            <h3 className="font-heading text-2xl font-black">Technical Arsenal</h3>
+            <h3 className="font-heading text-2xl font-black text-text-primary">Technical Arsenal</h3>
             <p className="mono-label text-xs text-text-tertiary">
               Research / Systems / Product
             </p>
@@ -112,7 +112,7 @@ export default function About() {
             {skills.map((skill) => (
               <span
                 key={skill}
-                className="rounded-md border border-border-primary bg-bg-secondary/55 px-4 py-2 font-mono text-xs font-bold text-text-secondary transition hover:border-primary/50 hover:text-primary"
+                className="rounded-md border border-border-primary bg-bg-tertiary/60 px-4 py-2 font-mono text-xs font-bold text-text-secondary transition hover:border-primary/50 hover:text-primary"
               >
                 {skill}
               </span>

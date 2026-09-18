@@ -45,7 +45,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 14 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            className="mb-8 inline-flex items-center gap-2 rounded-full border border-border-primary bg-bg-glass px-4 py-2 font-mono text-xs font-bold tracking-[0.16em] text-primary-light"
+            className="mb-8 inline-flex items-center gap-2 rounded-full border border-border-primary bg-bg-glass px-4 py-2 font-mono text-xs font-bold tracking-[0.16em] text-primary"
           >
             <Sparkles size={14} />
             RESEARCH_SYSTEM.ONLINE
@@ -96,7 +96,7 @@ export default function Hero() {
           >
             <Link
               href="#projects"
-              className="inline-flex items-center justify-center gap-2 rounded-md bg-primary px-7 py-4 font-mono text-sm font-black tracking-[0.12em] text-bg-primary transition hover:bg-primary-light"
+              className="inline-flex items-center justify-center gap-2 rounded-md bg-primary px-7 py-4 font-mono text-sm font-black tracking-[0.12em] text-white transition hover:bg-primary-dark shadow-md"
             >
               <Sparkles size={18} />
               EXPLORE RESEARCH
@@ -153,7 +153,7 @@ export default function Hero() {
                 </div>
                 <div className="pb-2 text-right">
                   <p className="mono-label text-xs text-text-tertiary">Current vector</p>
-                  <p className="mt-2 max-w-56 text-2xl font-black leading-tight">
+                  <p className="mt-2 max-w-56 text-2xl font-black leading-tight text-text-primary">
                     Where <span className="text-primary">mathematics</span>{" "}
                     meets code.
                   </p>
@@ -164,7 +164,7 @@ export default function Hero() {
                 {stats.map((stat) => (
                   <div
                     key={stat.label}
-                    className="flex items-center justify-between rounded-md border border-border-secondary bg-bg-primary/45 p-4"
+                    className="flex items-center justify-between rounded-md border border-border-primary bg-bg-tertiary/60 p-4"
                   >
                     <div>
                       <p className="text-2xl font-black text-text-primary">{stat.value}</p>
@@ -177,7 +177,7 @@ export default function Hero() {
                 ))}
               </div>
 
-              <div className="rounded-md border border-border-secondary bg-bg-primary/55 p-5">
+              <div className="rounded-md border border-border-primary bg-bg-tertiary/60 p-5">
                 <Sigma className="mb-4 text-primary" size={28} />
                 <p className="text-sm leading-7 text-text-secondary">
                   Dedicated to robust AI solutions that bridge theoretical

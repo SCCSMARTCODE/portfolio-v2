@@ -226,8 +226,8 @@ export default function Projects() {
               onClick={() => setActiveCategory(category)}
               className={`shrink-0 rounded-md border px-5 py-2.5 font-mono text-xs font-bold tracking-[0.1em] transition ${
                 activeCategory === category
-                  ? "border-primary bg-primary/18 text-primary-light"
-                  : "border-border-primary bg-bg-secondary/45 text-text-secondary hover:border-primary/50 hover:text-primary"
+                  ? "border-primary bg-primary text-white shadow-sm"
+                  : "border-border-primary bg-bg-secondary/60 text-text-secondary hover:border-primary/50 hover:text-primary"
               }`}
             >
               {category}
@@ -257,16 +257,16 @@ export default function Projects() {
                         <img
                           src={project.logo}
                           alt={`${project.title} logo`}
-                          className="h-8 w-8 shrink-0 rounded bg-white/90 object-contain p-1"
+                          className="h-8 w-8 shrink-0 rounded border border-border-primary bg-white object-contain p-1 shadow-sm"
                         />
                       )}
                       <div className="flex flex-wrap gap-2">
                         {project.featured && (
-                          <span className="rounded-full border border-primary/35 bg-primary/15 px-3 py-1 font-mono text-[0.66rem] font-black tracking-[0.12em] text-primary-light">
+                          <span className="rounded-full border border-primary/35 bg-primary/15 px-3 py-1 font-mono text-[0.66rem] font-black tracking-[0.12em] text-primary">
                             FEATURED
                           </span>
                         )}
-                        <span className="rounded-full border border-border-primary bg-bg-primary/45 px-3 py-1 font-mono text-[0.66rem] font-bold text-text-secondary">
+                        <span className="rounded-full border border-border-primary bg-bg-tertiary/70 px-3 py-1 font-mono text-[0.66rem] font-bold text-text-secondary">
                           {project.category}
                         </span>
                       </div>
@@ -298,7 +298,7 @@ export default function Projects() {
                   </div>
 
                   <div>
-                    <h3 className="font-heading text-2xl font-black transition group-hover:text-primary-light md:text-3xl">
+                    <h3 className="font-heading text-2xl font-black text-text-primary transition group-hover:text-primary md:text-3xl">
                       {project.title}
                     </h3>
                     <p className="mt-3 leading-7 text-text-secondary">
@@ -315,7 +315,7 @@ export default function Projects() {
                             [project.title]: !prev[project.title],
                           }))
                         }
-                        className="mt-2 font-mono text-xs font-bold tracking-[0.06em] text-primary-light transition hover:text-primary"
+                        className="mt-2 font-mono text-xs font-bold tracking-[0.06em] text-primary transition hover:text-primary-dark"
                       >
                         {expanded[project.title] ? "Show less" : "Read more"}
                       </button>
@@ -327,7 +327,7 @@ export default function Projects() {
                       {project.tags.map((tag) => (
                         <span
                           key={tag}
-                          className="rounded border border-border-primary bg-bg-primary/55 px-3 py-1 font-mono text-[0.68rem] font-bold text-text-secondary"
+                          className="rounded border border-border-primary bg-bg-tertiary/60 px-3 py-1 font-mono text-[0.68rem] font-bold text-text-secondary"
                         >
                           {tag}
                         </span>

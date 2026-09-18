@@ -18,10 +18,12 @@ export default function Contact() {
     message: "",
   });
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
+  const [errorMessage, setErrorMessage] = useState<string>("");
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setStatus("loading");
+    setErrorMessage("");
 
     try {
       const response = await fetch("/api/contact", {
@@ -30,14 +32,18 @@ export default function Contact() {
         body: JSON.stringify(formData),
       });
 
-      if (response.ok) {
+      const data = await response.json();
+
+      if (response.ok && data.success) {
         setStatus("success");
         setFormData({ name: "", email: "", message: "" });
       } else {
         setStatus("error");
+        setErrorMessage(data.error || "Transmission failed. Please try again.");
       }
     } catch {
       setStatus("error");
+      setErrorMessage("Connection error. Please try again later.");
     }
   };
 
@@ -139,13 +145,13 @@ export default function Contact() {
               </button>
 
               {status === "success" && (
-                <p className="font-mono text-sm font-bold text-emerald-400">
+                <p className="font-mono text-sm font-bold text-emerald-500">
                   Message transmitted successfully.
                 </p>
               )}
               {status === "error" && (
-                <p className="font-mono text-sm font-bold text-red-400">
-                  Transmission failed. Please try again.
+                <p className="font-mono text-sm font-bold text-rose-500">
+                  {errorMessage || "Transmission failed. Please try again."}
                 </p>
               )}
             </div>

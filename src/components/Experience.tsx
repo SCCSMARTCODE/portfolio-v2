@@ -94,10 +94,10 @@ export default function Experience() {
               <div className="panel rounded-lg p-6 md:p-7">
                 <div className="mb-5 flex flex-col gap-3 md:flex-row md:items-start md:justify-between">
                   <div>
-                    <p className="mono-label mb-2 text-xs text-primary-light">
+                    <p className="mono-label mb-2 text-xs font-bold text-primary">
                       {experience.period}
                     </p>
-                    <h3 className="font-heading text-2xl font-black md:text-3xl">
+                    <h3 className="font-heading text-2xl font-black text-text-primary md:text-3xl">
                       {experience.role}
                     </h3>
                     <div className="mt-1 flex items-center gap-2">
@@ -105,7 +105,7 @@ export default function Experience() {
                         <img
                           src={experience.logo}
                           alt={`${experience.company} logo`}
-                          className="h-5 w-5 shrink-0 rounded bg-white/90 object-contain p-0.5 md:hidden"
+                          className="h-5 w-5 shrink-0 rounded border border-border-primary bg-white object-contain p-0.5 md:hidden"
                         />
                       )}
                       <p className="text-text-secondary">{experience.company}</p>
@@ -115,7 +115,7 @@ export default function Experience() {
                     <img
                       src={experience.logo}
                       alt={`${experience.company} logo`}
-                      className="hidden h-12 w-12 shrink-0 rounded-lg bg-white/90 object-contain p-2 md:block"
+                      className="hidden h-12 w-12 shrink-0 rounded-lg border border-border-primary bg-white object-contain p-2 shadow-sm md:block"
                     />
                   ) : (
                     <Milestone className="hidden text-primary md:block" size={24} />
@@ -125,7 +125,7 @@ export default function Experience() {
                 <ul className="space-y-3 text-sm leading-6 text-text-secondary md:text-base">
                   {experience.bullets.map((bullet) => (
                     <li key={bullet} className="flex gap-3">
-                      <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-primary-light" />
+                      <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-primary" />
                       {bullet}
                     </li>
                   ))}
@@ -135,7 +135,7 @@ export default function Experience() {
                   {experience.tags.map((tag) => (
                     <span
                       key={tag}
-                      className="rounded border border-border-primary bg-bg-primary/55 px-3 py-1 font-mono text-[0.68rem] font-bold text-text-secondary"
+                      className="rounded border border-border-primary bg-bg-tertiary/60 px-3 py-1 font-mono text-[0.68rem] font-bold text-text-secondary"
                     >
                       {tag}
                     </span>

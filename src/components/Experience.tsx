@@ -10,19 +10,21 @@ const experiences = [
     period: "Mar 2026 - Present",
     bullets: [
       "Rebuilt the production platform into a high-performance Next.js architecture.",
-      "Designed backend stability patterns and improved secure document workflows.",
+      "Designed backend stability patterns and internal productivity/case-management tooling, alongside secure document workflows.",
     ],
     tags: ["Next.js", "System Arch", "Backend Ops"],
+    logo: "https://www.zeviellawfirm.ca/img/Logo.png",
   },
   {
     role: "Founding Product & AI Engineer",
     company: "Inkriv",
     period: "Mar 2025 - Present",
     bullets: [
-      "Served as an Inkriv engineer building adaptive ghostwriting, retrieval, orchestration, and AI memory systems.",
-      "Built backend environments connecting multi-modal features, AI personalization flows, and data ingestion.",
+      "Built the backend architecture for training and serving in-house models: supervised fine-tuning, reward modeling, and reinforcement learning.",
+      "Engineered an adaptive personalization system that learns a user's writing voice over time, built the product's MCP server, and shipped Inkriv Lens, a Chrome extension for real-time article fact-checking.",
     ],
-    tags: ["Inkriv", "Agentic AI", "LLM Orchestration", "Python"],
+    tags: ["Inkriv", "Model Training", "Reinforcement Learning", "MCP"],
+    logo: "https://inkriv.com/logo/inkriv-logo-dark.svg",
   },
   {
     role: "ML Trainee",
@@ -33,6 +35,7 @@ const experiences = [
       "Analyzed transformer mechanics and language model dynamics.",
     ],
     tags: ["PyTorch", "Transformers", "ML Theory"],
+    logo: null,
   },
   {
     role: "Software Engineering",
@@ -43,6 +46,7 @@ const experiences = [
       "Built foundations across C, Python, databases, and containerized workflows.",
     ],
     tags: ["Algorithms", "Systems C", "Data Structures"],
+    logo: null,
   },
 ];
 
@@ -96,9 +100,26 @@ export default function Experience() {
                     <h3 className="font-heading text-2xl font-black md:text-3xl">
                       {experience.role}
                     </h3>
-                    <p className="mt-1 text-text-secondary">{experience.company}</p>
+                    <div className="mt-1 flex items-center gap-2">
+                      {experience.logo && (
+                        <img
+                          src={experience.logo}
+                          alt={`${experience.company} logo`}
+                          className="h-5 w-5 shrink-0 rounded bg-white/90 object-contain p-0.5 md:hidden"
+                        />
+                      )}
+                      <p className="text-text-secondary">{experience.company}</p>
+                    </div>
                   </div>
-                  <Milestone className="hidden text-primary md:block" size={24} />
+                  {experience.logo ? (
+                    <img
+                      src={experience.logo}
+                      alt={`${experience.company} logo`}
+                      className="hidden h-12 w-12 shrink-0 rounded-lg bg-white/90 object-contain p-2 md:block"
+                    />
+                  ) : (
+                    <Milestone className="hidden text-primary md:block" size={24} />
+                  )}
                 </div>
 
                 <ul className="space-y-3 text-sm leading-6 text-text-secondary md:text-base">

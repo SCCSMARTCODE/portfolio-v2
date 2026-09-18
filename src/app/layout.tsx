@@ -33,10 +33,6 @@ export const metadata: Metadata = {
   publisher: siteConfig.author,
   keywords: [...siteConfig.keywords],
   manifest: "/manifest.webmanifest",
-  icons: {
-    icon: "/icon",
-    apple: "/apple-icon",
-  },
   alternates: {
     canonical: "/",
   },

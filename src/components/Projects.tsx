@@ -6,6 +6,71 @@ import { ArrowUpRight, Github, Microscope, Star } from "lucide-react";
 
 const projects = [
   {
+    title: "Inkriv AI Writing Assistant",
+    description:
+      "Founding AI engineering work at Inkriv: built the training and serving backend for in-house models, including supervised fine-tuning, reward modeling, and reinforcement learning. Engineered an adaptive personalization system that learns a user's own voice the more they write, alongside Inkriv Lens, a Chrome extension that fact-checks articles in real time, and the product's MCP server. One of several original systems built from the ground up rather than assembled from off-the-shelf tools.",
+    tags: ["Inkriv", "Personalization Engine", "Reinforcement Learning", "Inkriv Lens"],
+    category: "AI & ML",
+    github: null,
+    demo: null,
+    stars: null,
+    featured: true,
+    logo: "https://inkriv.com/logo/inkriv-logo-dark.svg",
+    tone: "from-violet-500/18",
+  },
+  {
+    title: "PureGold Events",
+    description:
+      "A full operating system for event planners, built for a luxury event planning brand. Tracks vetted vendor records (so planners never get burned by unreliable vendors), transactions, and client loyalty; gives clients a portal to follow and monitor their own event in real time; and auto-generates a portfolio case study straight from a completed project. Currently in beta.",
+    tags: ["Next.js", "Operations Platform", "Client Portal"],
+    category: "Web Dev",
+    github: null,
+    demo: "https://puregold.sccsmartcode.dev/",
+    stars: null,
+    featured: true,
+    logo: null,
+    tone: "from-yellow-500/16",
+  },
+  {
+    title: "Zeviel Law Firm",
+    description:
+      "Production platform for a Calgary-based law firm, rebuilt on Next.js as Systems Lead: secure document workflows and internal productivity tooling behind a professional client-facing site.",
+    tags: ["Next.js", "Legal Tech", "Systems Architecture"],
+    category: "Web Dev",
+    github: null,
+    demo: "https://www.zeviellawfirm.ca/",
+    stars: null,
+    featured: true,
+    logo: "https://www.zeviellawfirm.ca/img/Logo.png",
+    tone: "from-slate-500/16",
+  },
+  {
+    title: "SCCSMARTCODE Portfolio",
+    description:
+      "Personal portfolio site built end-to-end on Next.js, with an experience timeline, filterable project showcase, and a research-lab visual identity for presenting AI engineering and systems work.",
+    tags: ["Next.js", "Personal Brand", "Design Systems"],
+    category: "Web Dev",
+    github: "https://github.com/SCCSMARTCODE",
+    demo: "https://sccsmartcode.dev/",
+    stars: null,
+    featured: true,
+    logo: "/sccsmartcode-logo.jpg",
+    tone: "from-cyan-400/16",
+  },
+  {
+    title: "SMARTMULTIMEDIA",
+    description:
+      "Marketing and booking site for a multimedia production studio offering videography, photography, and live streaming services for brands, events, and creators.",
+    tags: ["Next.js", "Web Design", "Media"],
+    category: "Web Dev",
+    github: null,
+    demo: "https://smartmultimedia.me/",
+    stars: null,
+    featured: false,
+    logo: "https://smartmultimedia.me/brand/logo.png",
+    tone: "from-orange-500/14",
+  },
+  {
     title: "SafeX Labs",
     description:
       "Privacy-aware edge surveillance using multimodal LLMs for real-time frame classification, contextual analysis, and autonomous decision-making.",
@@ -15,19 +80,8 @@ const projects = [
     demo: null,
     stars: null,
     featured: true,
+    logo: null,
     tone: "from-cyan-500/16",
-  },
-  {
-    title: "Inkriv AI Writing Assistant",
-    description:
-      "Founding AI engineering work at Inkriv: built the training and serving backend for in-house models, including supervised fine-tuning, reward modeling, and ongoing Direct Preference Optimization. Engineered an adaptive personalization system that learns a user's own voice the more they write, alongside Inkriv Lens — a Chrome extension that fact-checks articles in real time — and the product's MCP server. One of several original systems built from the ground up rather than assembled from off-the-shelf tools.",
-    tags: ["Inkriv", "Personalization Engine", "RLHF / DPO", "Inkriv Lens"],
-    category: "AI & ML",
-    github: null,
-    demo: null,
-    stars: null,
-    featured: true,
-    tone: "from-violet-500/18",
   },
   {
     title: "CChatAPP",
@@ -39,6 +93,7 @@ const projects = [
     demo: null,
     stars: "-",
     featured: true,
+    logo: null,
     tone: "from-emerald-500/16",
   },
   {
@@ -51,6 +106,7 @@ const projects = [
     demo: null,
     stars: "1",
     featured: false,
+    logo: null,
     tone: "from-sky-500/14",
   },
   {
@@ -63,6 +119,7 @@ const projects = [
     demo: null,
     stars: "-",
     featured: false,
+    logo: null,
     tone: "from-fuchsia-500/14",
   },
   {
@@ -75,6 +132,7 @@ const projects = [
     demo: null,
     stars: "-",
     featured: false,
+    logo: null,
     tone: "from-amber-500/14",
   },
   {
@@ -87,6 +145,7 @@ const projects = [
     demo: null,
     stars: "-",
     featured: false,
+    logo: null,
     tone: "from-indigo-500/14",
   },
   {
@@ -99,6 +158,7 @@ const projects = [
     demo: null,
     stars: "-",
     featured: false,
+    logo: null,
     tone: "from-teal-500/14",
   },
   {
@@ -111,62 +171,23 @@ const projects = [
     demo: null,
     stars: "-",
     featured: false,
+    logo: null,
     tone: "from-rose-500/14",
-  },
-  {
-    title: "SCCSMARTCODE Portfolio",
-    description:
-      "Personal portfolio site built end-to-end on Next.js — experience timeline, filterable project showcase, and a research-lab visual identity for presenting AI engineering and systems work.",
-    tags: ["Next.js", "Personal Brand", "Design Systems"],
-    category: "Web Dev",
-    github: "https://github.com/SCCSMARTCODE",
-    demo: "https://sccsmartcode.dev/",
-    stars: null,
-    featured: true,
-    tone: "from-cyan-400/16",
-  },
-  {
-    title: "Zeviel Law Firm",
-    description:
-      "Production platform for a Calgary-based law firm, rebuilt on Next.js as Systems Lead — secure document workflows and internal productivity tooling behind a professional client-facing site.",
-    tags: ["Next.js", "Legal Tech", "Systems Architecture"],
-    category: "Web Dev",
-    github: null,
-    demo: "https://www.zeviellawfirm.ca/",
-    stars: null,
-    featured: true,
-    tone: "from-slate-500/16",
-  },
-  {
-    title: "PureGold Events",
-    description:
-      "A full operating system for event planners, built for a luxury event planning brand. Tracks vetted vendor records (so planners never get burned by unreliable vendors), transactions, and client loyalty; gives clients a portal to follow and monitor their own event in real time; and auto-generates a portfolio case study straight from a completed project. Currently in beta.",
-    tags: ["Next.js", "Operations Platform", "Client Portal"],
-    category: "Web Dev",
-    github: null,
-    demo: "https://puregold.sccsmartcode.dev/",
-    stars: null,
-    featured: true,
-    tone: "from-yellow-500/16",
-  },
-  {
-    title: "SMARTMULTIMEDIA",
-    description:
-      "Marketing and booking site for a multimedia production studio offering videography, photography, and live streaming services for brands, events, and creators.",
-    tags: ["Next.js", "Web Design", "Media"],
-    category: "Web Dev",
-    github: null,
-    demo: "https://smartmultimedia.me/",
-    stars: null,
-    featured: false,
-    tone: "from-orange-500/14",
   },
 ];
 
 const categories = ["All", "AI & ML", "Systems", "APIs", "Web Dev"];
 
+function truncateDescription(text: string, max = 150) {
+  if (text.length <= max) return text;
+  const truncated = text.slice(0, max);
+  const lastSpace = truncated.lastIndexOf(" ");
+  return `${truncated.slice(0, lastSpace > 0 ? lastSpace : max).trimEnd()}…`;
+}
+
 export default function Projects() {
   const [activeCategory, setActiveCategory] = useState("All");
+  const [expanded, setExpanded] = useState<Record<string, boolean>>({});
   const filteredProjects =
     activeCategory === "All"
       ? projects
@@ -230,16 +251,25 @@ export default function Projects() {
               >
                 <div className="absolute inset-0 opacity-[0.08] [background-image:radial-gradient(circle_at_1px_1px,currentColor_1px,transparent_0)] [background-size:22px_22px]" />
                 <div className="relative flex h-full flex-col">
-                  <div className="mb-10 flex items-start justify-between gap-4">
-                    <div className="flex flex-wrap gap-2">
-                      {project.featured && (
-                        <span className="rounded-full border border-primary/35 bg-primary/15 px-3 py-1 font-mono text-[0.66rem] font-black tracking-[0.12em] text-primary-light">
-                          FEATURED
-                        </span>
+                  <div className="mb-6 flex items-start justify-between gap-4">
+                    <div className="flex items-center gap-3">
+                      {project.logo && (
+                        <img
+                          src={project.logo}
+                          alt={`${project.title} logo`}
+                          className="h-8 w-8 shrink-0 rounded bg-white/90 object-contain p-1"
+                        />
                       )}
-                      <span className="rounded-full border border-border-primary bg-bg-primary/45 px-3 py-1 font-mono text-[0.66rem] font-bold text-text-secondary">
-                        {project.category}
-                      </span>
+                      <div className="flex flex-wrap gap-2">
+                        {project.featured && (
+                          <span className="rounded-full border border-primary/35 bg-primary/15 px-3 py-1 font-mono text-[0.66rem] font-black tracking-[0.12em] text-primary-light">
+                            FEATURED
+                          </span>
+                        )}
+                        <span className="rounded-full border border-border-primary bg-bg-primary/45 px-3 py-1 font-mono text-[0.66rem] font-bold text-text-secondary">
+                          {project.category}
+                        </span>
+                      </div>
                     </div>
                     <div className="flex items-center gap-3">
                       {project.github && (
@@ -267,15 +297,33 @@ export default function Projects() {
                     </div>
                   </div>
 
-                  <div className="mt-auto">
+                  <div>
                     <h3 className="font-heading text-2xl font-black transition group-hover:text-primary-light md:text-3xl">
                       {project.title}
                     </h3>
                     <p className="mt-3 leading-7 text-text-secondary">
-                      {project.description}
+                      {expanded[project.title]
+                        ? project.description
+                        : truncateDescription(project.description)}
                     </p>
+                    {project.description.length > 150 && (
+                      <button
+                        type="button"
+                        onClick={() =>
+                          setExpanded((prev) => ({
+                            ...prev,
+                            [project.title]: !prev[project.title],
+                          }))
+                        }
+                        className="mt-2 font-mono text-xs font-bold tracking-[0.06em] text-primary-light transition hover:text-primary"
+                      >
+                        {expanded[project.title] ? "Show less" : "Read more"}
+                      </button>
+                    )}
+                  </div>
 
-                    <div className="mt-6 flex flex-wrap gap-2">
+                  <div className="mt-auto pt-6">
+                    <div className="flex flex-wrap gap-2">
                       {project.tags.map((tag) => (
                         <span
                           key={tag}

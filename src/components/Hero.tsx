@@ -6,12 +6,12 @@ import { motion } from "framer-motion";
 import {
   BrainCircuit,
   Code2,
+  FlaskConical,
   Github,
   GraduationCap,
   Linkedin,
   Microscope,
   Sigma,
-  Sparkles,
   Twitter,
   Youtube,
 } from "lucide-react";
@@ -47,7 +47,7 @@ export default function Hero() {
             transition={{ duration: 0.5 }}
             className="mb-8 inline-flex items-center gap-2 rounded-full border border-border-primary bg-bg-glass px-4 py-2 font-mono text-xs font-bold tracking-[0.16em] text-primary"
           >
-            <Sparkles size={14} />
+            <BrainCircuit size={15} />
             RESEARCH_SYSTEM.ONLINE
           </motion.div>
 
@@ -83,9 +83,7 @@ export default function Hero() {
             transition={{ duration: 0.55, delay: 0.18 }}
             className="mx-auto mt-7 max-w-2xl text-lg leading-8 text-text-secondary md:text-xl lg:mx-0"
           >
-            Founding Product & AI Engineer at Inkriv, machine learning
-            researcher, and AI systems lead engineering the intersection of
-            mathematics, scalable software, and intelligent product architecture.
+            Founding Product & AI Engineer at Inkriv, machine learning researcher, and AI systems lead engineering LLM post-training, preference optimization, reward modeling, and production intelligent software.
           </motion.p>
 
           <motion.div
@@ -96,9 +94,9 @@ export default function Hero() {
           >
             <Link
               href="#projects"
-              className="inline-flex items-center justify-center gap-2 rounded-md bg-primary px-7 py-4 font-mono text-sm font-black tracking-[0.12em] text-white transition hover:bg-primary-dark shadow-md"
+              className="btn-primary inline-flex items-center justify-center gap-2 rounded-md px-7 py-4 font-mono text-sm font-black tracking-[0.12em] transition hover:opacity-90 shadow-md"
             >
-              <Sparkles size={18} />
+              <FlaskConical size={18} />
               EXPLORE RESEARCH
             </Link>
             <Link

@@ -8,8 +8,8 @@ const projects = [
   {
     title: "Inkriv AI Writing Assistant",
     description:
-      "Founding AI engineering work at Inkriv: built the training and serving backend for in-house models, including supervised fine-tuning, reward modeling, and reinforcement learning. Engineered an adaptive personalization system that learns a user's own voice the more they write, alongside Inkriv Lens, a Chrome extension that fact-checks articles in real time, and the product's MCP server. One of several original systems built from the ground up rather than assembled from off-the-shelf tools.",
-    tags: ["Inkriv", "Personalization Engine", "Reinforcement Learning", "Inkriv Lens"],
+      "Founding AI research and engineering work at Inkriv: engineered the LLM post-training pipeline for in-house models, including dataset curation, supervised fine-tuning, reward modeling, and preference optimization (RLHF/DPO). Built an adaptive personalization engine that learns a user's writing voice, alongside Inkriv Lens for real-time article fact-checking, and the product's Model Context Protocol (MCP) server.",
+    tags: ["Reward Modeling", "RLHF / DPO", "Preference Learning", "Inkriv Lens", "MCP"],
     category: "AI & ML",
     github: null,
     demo: null,
@@ -140,7 +140,7 @@ const projects = [
     description:
       "Enterprise AI chatbot built with FastAPI and Hugging Face inference for production-grade conversational workflows.",
     tags: ["FastAPI", "Gemma-2", "Production"],
-    category: "APIs",
+    category: "AI & ML",
     github: "https://github.com/SCCSMARTCODE/VerisBot",
     demo: null,
     stars: "-",
@@ -176,7 +176,7 @@ const projects = [
   },
 ];
 
-const categories = ["All", "AI & ML", "Systems", "APIs", "Web Dev"];
+const categories = ["All", "AI & ML", "Systems", "Web Dev"];
 
 function truncateDescription(text: string, max = 150) {
   if (text.length <= max) return text;
@@ -226,7 +226,7 @@ export default function Projects() {
               onClick={() => setActiveCategory(category)}
               className={`shrink-0 rounded-md border px-5 py-2.5 font-mono text-xs font-bold tracking-[0.1em] transition ${
                 activeCategory === category
-                  ? "border-primary bg-primary text-white shadow-sm"
+                  ? "btn-primary border-primary shadow-sm"
                   : "border-border-primary bg-bg-secondary/60 text-text-secondary hover:border-primary/50 hover:text-primary"
               }`}
             >

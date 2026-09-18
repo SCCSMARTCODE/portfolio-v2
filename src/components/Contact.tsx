@@ -138,7 +138,7 @@ export default function Contact() {
               <button
                 type="submit"
                 disabled={status === "loading"}
-                className="mt-2 inline-flex w-full items-center justify-center gap-3 rounded-md bg-primary px-6 py-4 font-mono text-sm font-black tracking-[0.14em] text-bg-primary transition hover:bg-primary-light disabled:cursor-not-allowed disabled:opacity-60 md:w-fit"
+                className="btn-primary mt-2 inline-flex w-full items-center justify-center gap-3 rounded-md px-6 py-4 font-mono text-sm font-black tracking-[0.14em] transition hover:opacity-90 disabled:cursor-not-allowed disabled:opacity-60 md:w-fit"
               >
                 {status === "loading" ? "TRANSMITTING..." : "TRANSMIT DATA"}
                 <Send size={17} />

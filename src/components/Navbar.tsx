@@ -64,7 +64,7 @@ export default function Navbar() {
             <ThemeToggle />
             <a
               href="#contact"
-              className="inline-flex items-center gap-2 rounded-md border border-primary/30 bg-primary px-4 py-2 text-sm font-bold text-white transition hover:bg-primary-dark shadow-sm"
+              className="btn-primary inline-flex items-center gap-2 rounded-md border border-primary/30 px-4 py-2 text-sm font-bold transition hover:opacity-90 shadow-sm"
             >
               <BriefcaseBusiness size={16} />
               Collaborate

@@ -20,8 +20,8 @@ const projects = [
   {
     title: "Inkriv AI Writing Assistant",
     description:
-      "Inkriv engineering work on an adaptive AI writing assistant with ghostwriting inference, retrieval, memory, and multi-model orchestration.",
-    tags: ["Inkriv", "FastAPI", "RAG", "AI Memory"],
+      "Founding AI engineering work at Inkriv: built the training and serving backend for in-house models, including supervised fine-tuning, reward modeling, and ongoing Direct Preference Optimization. Engineered an adaptive personalization system that learns a user's own voice the more they write, alongside Inkriv Lens — a Chrome extension that fact-checks articles in real time — and the product's MCP server. One of several original systems built from the ground up rather than assembled from off-the-shelf tools.",
+    tags: ["Inkriv", "Personalization Engine", "RLHF / DPO", "Inkriv Lens"],
     category: "AI & ML",
     github: null,
     demo: null,
@@ -113,6 +113,54 @@ const projects = [
     featured: false,
     tone: "from-rose-500/14",
   },
+  {
+    title: "SCCSMARTCODE Portfolio",
+    description:
+      "Personal portfolio site built end-to-end on Next.js — experience timeline, filterable project showcase, and a research-lab visual identity for presenting AI engineering and systems work.",
+    tags: ["Next.js", "Personal Brand", "Design Systems"],
+    category: "Web Dev",
+    github: "https://github.com/SCCSMARTCODE",
+    demo: "https://sccsmartcode.dev/",
+    stars: null,
+    featured: true,
+    tone: "from-cyan-400/16",
+  },
+  {
+    title: "Zeviel Law Firm",
+    description:
+      "Production platform for a Calgary-based law firm, rebuilt on Next.js as Systems Lead — secure document workflows and internal productivity tooling behind a professional client-facing site.",
+    tags: ["Next.js", "Legal Tech", "Systems Architecture"],
+    category: "Web Dev",
+    github: null,
+    demo: "https://www.zeviellawfirm.ca/",
+    stars: null,
+    featured: true,
+    tone: "from-slate-500/16",
+  },
+  {
+    title: "PureGold Events",
+    description:
+      "A full operating system for event planners, built for a luxury event planning brand. Tracks vetted vendor records (so planners never get burned by unreliable vendors), transactions, and client loyalty; gives clients a portal to follow and monitor their own event in real time; and auto-generates a portfolio case study straight from a completed project. Currently in beta.",
+    tags: ["Next.js", "Operations Platform", "Client Portal"],
+    category: "Web Dev",
+    github: null,
+    demo: "https://puregold.sccsmartcode.dev/",
+    stars: null,
+    featured: true,
+    tone: "from-yellow-500/16",
+  },
+  {
+    title: "SMARTMULTIMEDIA",
+    description:
+      "Marketing and booking site for a multimedia production studio offering videography, photography, and live streaming services for brands, events, and creators.",
+    tags: ["Next.js", "Web Design", "Media"],
+    category: "Web Dev",
+    github: null,
+    demo: "https://smartmultimedia.me/",
+    stars: null,
+    featured: false,
+    tone: "from-orange-500/14",
+  },
 ];
 
 const categories = ["All", "AI & ML", "Systems", "APIs", "Web Dev"];
@@ -137,7 +185,7 @@ export default function Projects() {
           <div className="max-w-2xl">
             <span className="section-kicker">
               <Microscope size={14} />
-              8+ Projects
+              12+ Projects
             </span>
             <h2 className="mt-6 font-heading text-4xl font-black leading-tight md:text-6xl">
               Featured Innovations

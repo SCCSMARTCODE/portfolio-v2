@@ -12,7 +12,7 @@ const projects = [
     tags: ["Reward Modeling", "RLHF / DPO", "Preference Learning", "Inkriv Lens", "MCP"],
     category: "AI & ML",
     github: null,
-    demo: null,
+    demo: "https://inkriv.com/",
     stars: null,
     featured: true,
     logo: "https://inkriv.com/logo/inkriv-logo-dark.svg",

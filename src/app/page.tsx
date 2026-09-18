@@ -30,7 +30,7 @@ const structuredData = {
         "Emmanuel Ayobami Adewumi",
       ],
       url: siteConfig.url.toString(),
-      image: new URL("/sccsmartcode-profile.jpeg", siteConfig.url).toString(),
+      image: new URL("/portrate_picture.jpg", siteConfig.url).toString(),
       email: siteConfig.email,
       jobTitle: [
         "Founding Product & AI Engineer at Inkriv",

@@ -58,7 +58,7 @@ export default function Hero() {
             className="mx-auto mb-8 h-28 w-28 overflow-hidden rounded-2xl border-2 border-primary/60 bg-bg-tertiary shadow-[0_0_45px_rgba(124,58,237,0.35)] lg:hidden"
           >
             <Image
-              src="/sccsmartcode-profile.jpeg"
+              src="/portrate_picture.jpg"
               alt="Emmanuel Adewumi"
               width={224}
               height={224}
@@ -141,7 +141,7 @@ export default function Hero() {
               <div className="flex items-end justify-between gap-8">
                 <div className="h-56 w-56 overflow-hidden rounded-2xl border-2 border-primary/60 bg-bg-tertiary shadow-[0_0_60px_rgba(124,58,237,0.35)]">
                   <Image
-                    src="/sccsmartcode-profile.jpeg"
+                    src="/portrate_picture.jpg"
                     alt="Emmanuel Adewumi"
                     width={448}
                     height={448}
